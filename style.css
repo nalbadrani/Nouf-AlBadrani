@@ -1,9 +1,9 @@
 :root {
-    --earth-dark: #2C2D1E;       /* بني زيتوني داكن */
-    --earth-olive: #4A4E35;      /* بني مخضر زيتي */
-    --earth-accent: #6E7552;     /* أخضر ترابي */
-    --earth-sage: #8F9779;       /* أخضر هادئ */
-    --earth-light: #F4F3EF;      /* كريمي دافئ */
+    --earth-dark: #2C2D1E;       
+    --earth-olive: #4A4E35;      
+    --earth-accent: #6E7552;     
+    --earth-sage: #8F9779;       
+    --earth-light: #F4F3EF;      
     --text-dark: #1F2116;
     --text-muted: #5C6049;
 }
@@ -22,6 +22,8 @@ body {
     color: var(--text-dark);
     line-height: 1.7;
     min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
 }
 
 #particles-js {
@@ -34,11 +36,29 @@ body {
     pointer-events: none;
 }
 
+/* ⚖️ Floating Scales of Justice Background Element */
+.floating-scales-bg {
+    position: fixed;
+    top: 25%;
+    left: 8%;
+    font-size: 18rem;
+    color: rgba(143, 151, 121, 0.05);
+    z-index: 0;
+    pointer-events: none;
+    animation: floatScale 8s ease-in-out infinite;
+}
+
+@keyframes floatScale {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(3deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(44, 45, 30, 0.85);
+    background: rgba(44, 45, 30, 0.88);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(143, 151, 121, 0.2);
     z-index: 1000;
@@ -77,17 +97,39 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 1.8rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #D3D2C7;
     font-weight: 500;
+    font-size: 0.95rem;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
+    color: #FFF;
+}
+
+/* Language Switcher Button */
+.lang-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #E8E7DF;
+    border: 1px solid rgba(143, 151, 121, 0.4);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
     color: #FFF;
 }
 
@@ -227,6 +269,47 @@ section {
     font-size: 1.8rem;
     color: var(--earth-dark);
     margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--earth-sage);
+    padding-bottom: 0.4rem;
+    display: inline-block;
+}
+
+.item-block h3 {
+    color: var(--earth-dark);
+    font-size: 1.2rem;
+}
+
+.sub-date {
+    font-size: 0.88rem;
+    color: var(--earth-accent);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.item-block ul, .cert-list {
+    padding-right: 1.2rem;
+    list-style-type: square;
+}
+
+html[dir="ltr"] .item-block ul, html[dir="ltr"] .cert-list {
+    padding-right: 0;
+    padding-left: 1.2rem;
+}
+
+.cert-list {
+    list-style: none;
+}
+
+.cert-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.cert-list li i {
+    color: var(--earth-accent);
 }
 
 .contact-card {
@@ -242,4 +325,9 @@ footer {
     font-size: 0.9rem;
     background: rgba(31, 33, 22, 0.95);
     border-top: 1px solid rgba(143, 151, 121, 0.2);
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .floating-scales-bg { display: none; }
 }
