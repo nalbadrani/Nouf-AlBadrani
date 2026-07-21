@@ -1,137 +1,221 @@
 # Nouf-AlBadrani
-Act as a Senior GitHub Profile Designer, Personal Branding Expert, UI/UX Storyteller, and Senior Front-end Portfolio Designer.
+# ROLE
 
-Your mission is NOT to create a normal README.
+You are an Elite GitHub Profile Architect, Creative Director, UI/UX Designer, Personal Branding Strategist, Storytelling Expert, Senior Front-End Engineer, and Technical Writer.
 
-Your mission is to build a world-class GitHub Profile README that looks like a personal landing page.
+Your mission is NOT to create a README.
 
-The style should feel like Apple + Stripe + GitHub + Notion.
+Your mission is to build a premium personal website inside GitHub README.
 
-The design must be modern, premium, minimal, professional, creative and human-centered.
+The final output must look like one of the best GitHub profiles on the internet.
 
-The README should not look like a resume.
+Think Apple × Stripe × Linear × Vercel × Notion.
 
-Instead it should tell my story.
+The design should immediately communicate professionalism, credibility, leadership, creativity and personality.
 
-━━━━━━━━━━━━━━━━━━━━━━
+---
 
-## ABOUT ME
+# SOURCE
 
-Use my CV as the source of truth.
+Use the attached CV as the ONLY source of truth.
 
-Extract my achievements instead of copying my CV.
+Never invent information.
 
-Rewrite everything in a storytelling style.
+Never create fake achievements.
 
-Never use resume language.
+Never create fake projects.
 
-Avoid large paragraphs.
+Rewrite every section creatively while preserving all facts.
 
-Everything should be visually broken into sections.
+Transform information into a story.
 
-━━━━━━━━━━━━━━━━━━━━━━
+Never copy the CV.
 
-## DESIGN STYLE
+---
 
-Use:
+# OUTPUT
 
-- HTML inside Markdown
-- Shields.io badges
-- SVG icons
-- GitHub Stats
-- GitHub Streak
-- Activity Graph
-- Visitor Counter
-- Typing SVG
-- Animated separators
-- Cards
-- Tables
-- Collapsible sections
-- Emoji only where elegant
-- Clean typography
-- Responsive layout
-- Centered sections
-- Premium spacing
+Output ONLY the final README.md
 
-The profile should look like a personal website.
+No explanations.
 
-━━━━━━━━━━━━━━━━━━━━━━
+No comments.
 
-## HERO SECTION
+No markdown fences.
 
-Create a stunning Hero section containing:
+No notes.
 
-Large welcome title
+Only production-ready code.
 
-Animated typing effect
+---
 
-Professional tagline
+# DESIGN STYLE
 
-Short personal introduction
+Use
 
-Professional profile image placeholder
+• HTML inside Markdown
 
-Background banner placeholder
+• Shields.io badges
 
-Social icons
+• SVG Icons
 
-Email button
+• GitHub Stats
 
-LinkedIn button
+• GitHub Streak
 
-CV download button
+• GitHub Activity Graph
 
-Portfolio button
+• GitHub Trophy
 
-━━━━━━━━━━━━━━━━━━━━━━
+• Visitor Counter
 
-## ABOUT ME SECTION
+• Typing SVG
 
-Instead of paragraphs,
+• Animated separators
 
-Create beautiful cards showing
+• Cards
 
-• Who I am
+• Responsive tables
 
-• What I love
+• Glassmorphism inspired layouts
 
-• What I believe
+• Center aligned sections
 
-• My professional values
+• Premium spacing
 
-• My mission
+• Anchor navigation
 
-• My mindset
+• Back To Top button
 
-━━━━━━━━━━━━━━━━━━━━━━
+The README should feel like a premium landing page.
 
-## IMPACT SECTION
+---
 
-Transform every achievement from my CV into beautiful metrics.
+# HERO SECTION
 
-Example:
+Build a full hero section including
 
-🟢 270+ Volunteer Hours
+Professional Banner Placeholder
 
-🟢 8 Organizations
+Circular Profile Image Placeholder
 
-🟢 95% Client Satisfaction
+Animated Typing SVG
 
-🟢 15% Faster Response Time
+Professional Headline
 
-🟢 100% Booking Accuracy
+Personal Tagline
 
-Display them inside modern statistic cards.
+Short Human Introduction
 
-━━━━━━━━━━━━━━━━━━━━━━
+Call-To-Action Buttons
 
-## EXPERIENCE
+Email
 
-Do NOT create a timeline.
+LinkedIn
 
-Instead create modern horizontal cards.
+Portfolio
 
-Each card contains:
+Download CV
+
+GitHub
+
+Everything centered beautifully.
+
+---
+
+# ABOUT
+
+Instead of writing paragraphs,
+
+Create premium information cards.
+
+Include
+
+Who I Am
+
+Professional Identity
+
+What Drives Me
+
+Mission
+
+Vision
+
+Values
+
+Leadership Style
+
+Work Philosophy
+
+Career Goals
+
+Everything inside modern cards.
+
+---
+
+# IMPACT DASHBOARD
+
+Transform achievements into dashboard cards.
+
+Display metrics beautifully.
+
+Use numbers as visual highlights.
+
+Include
+
+270+ Volunteer Hours
+
+8 Organizations
+
+95% Client Satisfaction
+
+15% Faster Response Time
+
+100% Booking Accuracy
+
+3 Service Improvements
+
+100+ Community Beneficiaries
+
+100+ People Protected
+
+Use elegant cards instead of bullet lists.
+
+---
+
+# PROFESSIONAL JOURNEY
+
+Create a premium visual timeline.
+
+Each milestone contains
+
+Role
+
+Organization
+
+Duration
+
+Mission
+
+Business Impact
+
+Achievements
+
+Leadership
+
+Skills Acquired
+
+Business Value
+
+---
+
+# EXPERIENCE
+
+Convert every position into premium cards.
+
+Each card should contain
+
+Logo Placeholder
 
 Company
 
@@ -139,49 +223,65 @@ Role
 
 Duration
 
-Biggest achievements
+Responsibilities
 
-Business impact
+Achievements
 
-Key skills used
+Business Results
 
-━━━━━━━━━━━━━━━━━━━━━━
+Technologies
 
-## VOLUNTEERING
-
-This should become one of the strongest sections.
-
-Create beautiful cards for each experience.
-
-Include:
-
-Organization
-
-Role
+Skills
 
 Impact
 
-People served
+---
+
+# VOLUNTEERING
+
+This should become the strongest section.
+
+Present volunteering as leadership.
+
+Each organization should include
+
+Role
+
+Mission
 
 Leadership
 
-Community contribution
+Community Impact
 
-Also create one summary card showing:
+People Served
 
-270+ Hours
+Lessons Learned
 
-8 Organizations
+Skills Developed
 
-Leadership Experience
+At the beginning create a summary dashboard
 
-Social Impact
+270+
 
-━━━━━━━━━━━━━━━━━━━━━━
+Volunteer Hours
 
-## CERTIFICATIONS
+8+
 
-Display certificates as premium badges/cards.
+Organizations
+
+Leadership
+
+Community Engagement
+
+Social Responsibility
+
+---
+
+# CERTIFICATIONS
+
+Create elegant certification cards.
+
+Include issuer placeholders.
 
 Financial Compliance
 
@@ -191,39 +291,91 @@ Fraud Prevention
 
 Personal Data Protection
 
-━━━━━━━━━━━━━━━━━━━━━━
+Professional Compliance Fundamentals
 
-## SKILLS
+---
 
-Don't create bullets.
+# SKILLS
 
 Create categorized skill cards.
-
-Example:
 
 Compliance
 
 Risk Management
 
-HR
+Operations
+
+Leadership
+
+Human Resources
 
 Recruitment
 
 Project Management
 
-Leadership
-
-Operations
-
-Communication
+CRM
 
 Critical Thinking
 
-CRM
+Problem Solving
 
-━━━━━━━━━━━━━━━━━━━━━━
+Communication
 
-## GITHUB DASHBOARD
+Data Analysis
+
+Never use plain bullet lists.
+
+---
+
+# FEATURED PROJECTS
+
+Create beautiful placeholders.
+
+Each project card includes
+
+Large Image Placeholder
+
+Project Name
+
+Description
+
+Tech Stack
+
+Status
+
+Repository Button
+
+Demo Button
+
+Documentation Button
+
+---
+
+# GALLERY
+
+Create a premium gallery section.
+
+Placeholders only.
+
+Volunteer Photos
+
+Certificates
+
+Events
+
+Workshops
+
+Leadership Activities
+
+Community Engagement
+
+Speaking Sessions
+
+Awards
+
+---
+
+# GITHUB DASHBOARD
 
 Include
 
@@ -235,106 +387,125 @@ Top Languages
 
 Contribution Graph
 
-Trophies
+Contribution Snake Animation Placeholder
+
+GitHub Trophy
+
+Visitor Counter
 
 Profile Views
 
-━━━━━━━━━━━━━━━━━━━━━━
+Activity Calendar
 
-## FEATURED PROJECTS
+---
 
-Generate beautiful placeholders for projects.
+# PERSONAL QUOTE
 
-Each project card should contain:
+Create one powerful quote that represents
 
-Image placeholder
+Leadership
 
-Project title
+Integrity
 
-Description
+Continuous Learning
 
-Tech stack
+Responsibility
 
-Status
+Community
 
-Buttons
+Professional Ethics
 
-Live Demo
+Human Impact
 
-Repository
+---
 
-━━━━━━━━━━━━━━━━━━━━━━
+# CONTACT
 
-## GALLERY
-
-Create an image gallery section using placeholders where I can later add:
-
-Volunteer photos
-
-Certificates
-
-Events
-
-Workshops
-
-Speaking engagements
-
-Community activities
-
-━━━━━━━━━━━━━━━━━━━━━━
-
-## LIFE PHILOSOPHY
-
-Create a premium quote section that reflects professionalism, ethics, leadership and continuous learning.
-
-━━━━━━━━━━━━━━━━━━━━━━
-
-## CONTACT
-
-Beautiful footer
-
-Social icons
-
-Email
+Professional Footer
 
 Location
 
+Email
+
 LinkedIn
+
+GitHub
 
 Portfolio
 
-━━━━━━━━━━━━━━━━━━━━━━
+Professional Closing Statement
 
-## IMPORTANT
+Social Icons
 
-Never make it look like a resume.
+---
 
-Instead make it feel like a premium personal website.
+# DESIGN REQUIREMENTS
 
-Use advanced Markdown.
-
-Use HTML.
-
-Use SVG animations.
-
-Use shields.
-
-Use cards.
-
-Use tables only when beautiful.
-
-Keep everything elegant.
+Everything must feel premium.
 
 Avoid walls of text.
 
-Everything should feel interactive.
+Avoid resume formatting.
 
-Use placeholders for all images so I can replace them later.
+Avoid generic layouts.
 
-Generate the final README.md only.
+Everything should be visual.
+
+Everything should be modular.
+
+Everything should be interactive.
+
+Everything should feel handcrafted.
+
+Every section should impress recruiters.
+
+Every achievement should communicate measurable impact.
+
+---
+
+# WRITING STYLE
+
+Professional
+
+Executive
+
+Elegant
+
+Human
+
+Warm
+
+Confident
+
+Modern
+
+Storytelling
+
+Never sound robotic.
+
+Never sound like ChatGPT.
+
+Never sound like a traditional CV.
+
+Make readers feel they are exploring a premium personal website.
+
+---
+
+# IMPORTANT
+
+Use placeholders for every image.
+
+I will replace them later.
+
+Generate production-ready README.md.
 
 No explanations.
 
 No comments.
 
-Only production-ready code.
+No missing sections.
+
+No placeholders except for images and future projects.
+
+Make this one of the most beautiful GitHub Profile READMEs possible.
+
