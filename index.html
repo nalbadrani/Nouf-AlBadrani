@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نوف البدراني | Nouf Albadrani - Portfolio</title>
+    <title>Nouf ALBdarni | نوف البدراني</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #1e3d59;
-            --secondary-color: #17b978;
-            --accent-color: #ff6e40;
-            --bg-color: #f5f7fa;
-            --card-bg: #ffffff;
-            --text-color: #333333;
-            --text-light: #666666;
-            --border-color: #e1e8ed;
+            --bg-dark: #3b4238; /* لون الخلفية الزيتي الداكن المستوحى من صورتك */
+            --card-bg: rgba(50, 56, 48, 0.85); /* لون البطاقات المتناسق */
+            --accent-green: #606d5c; /* لون تفاعلي متناسق */
+            --text-light: #ffffff; /* النصوص البيضاء البارزة */
+            --text-muted: #d0d5ce; /* النصوص الفرعية */
+            --border-color: rgba(255, 255, 255, 0.15);
         }
 
         * {
@@ -27,98 +25,115 @@
 
         body {
             font-family: 'Tajawal', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             line-height: 1.8;
             padding: 20px;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
-            background: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            padding: 40px;
         }
 
-        /* Lang Switcher */
-        .lang-switch {
-            text-align: left;
-            margin-bottom: 20px;
+        /* Navbar & Top Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
         }
 
         .lang-btn {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 8px 16px;
+            background: var(--card-bg);
+            color: var(--text-light);
+            border: 1px solid var(--border-color);
+            padding: 6px 16px;
             border-radius: 20px;
             cursor: pointer;
             font-family: 'Tajawal', sans-serif;
-            font-weight: 500;
+            font-size: 0.85rem;
         }
 
         .lang-btn:hover {
-            background: var(--secondary-color);
+            background: var(--accent-green);
         }
 
-        header {
+        /* Hero / Header Section */
+        .hero-section {
             text-align: center;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 30px;
-            margin-bottom: 40px;
+            padding: 40px 20px;
+            margin-bottom: 30px;
         }
 
-        header h1 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            color: var(--secondary-color);
+        .hero-section h1 {
+            font-size: 2.8rem;
             font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
         }
 
-        section {
-            margin-bottom: 40px;
+        .hero-section p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        /* Portfolio Cards */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
         }
 
         h2 {
             font-size: 1.4rem;
-            color: var(--primary-color);
+            color: var(--text-light);
             margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 8px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
         }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--secondary-color);
-        }
-
-        .rtl h2::after {
-            right: 0;
-            left: auto;
-        }
-
-        .ltr h2::after {
-            left: 0;
-            right: auto;
+        h3 {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
         }
 
         p, li {
             font-size: 1rem;
-            color: var(--text-light);
+            color: var(--text-muted);
             margin-bottom: 10px;
         }
 
@@ -126,65 +141,41 @@
             list-style-type: none;
         }
 
-        .card {
-            background: #fafbfc;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 15px;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-color: var(--secondary-color);
-        }
-
-        .card h3 {
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
         .sub-list {
             margin-top: 10px;
-            padding-right: 15px;
-            border-right: 2px solid var(--secondary-color);
-        }
-
-        .ltr .sub-list {
-            padding-right: 0;
-            padding-left: 15px;
-            border-right: none;
-            border-left: 2px solid var(--secondary-color);
+            margin-right: 15px;
         }
 
         .sub-list li {
             position: relative;
-            padding-right: 12px;
+            padding-right: 15px;
             margin-bottom: 6px;
         }
 
-        .ltr .sub-list li {
-            padding-right: 0;
-            padding-left: 12px;
+        .sub-list li::before {
+            content: "•";
+            position: absolute;
+            right: 0;
+            color: var(--text-light);
         }
 
+        .role-title {
+            font-weight: bold;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+        }
+
+        /* Quote Box */
         .quote-box {
-            background: rgba(23, 185, 120, 0.05);
-            border-right: 4px solid var(--secondary-color);
+            background: rgba(0, 0, 0, 0.2);
+            border-right: 4px solid var(--text-light);
             padding: 20px;
-            border-radius: 0 12px 12px 0;
-            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
             font-style: italic;
-            color: var(--primary-color);
+            color: var(--text-light);
             font-weight: 500;
-        }
-
-        .ltr .quote-box {
-            border-right: none;
-            border-left: 4px solid var(--secondary-color);
-            border-radius: 12px 0 0 12px;
         }
 
         .contact-info {
@@ -197,11 +188,16 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 8px;
-            color: var(--primary-color);
+            gap: 10px;
+            color: var(--text-light);
             font-weight: 500;
         }
 
+        .contact-item i {
+            color: var(--text-muted);
+        }
+
+        /* Lang Content Switching */
         .lang-content {
             display: none;
         }
@@ -209,100 +205,130 @@
         .lang-content.active {
             display: block;
         }
+
+        /* LTR Adjustments for English */
+        .ltr {
+            direction: ltr;
+            text-align: left;
+        }
+
+        .ltr h2, .ltr h3, .ltr p, .ltr li, .ltr .quote-box, .ltr .contact-info {
+            text-align: left;
+        }
+
+        .ltr .sub-list {
+            margin-right: 0;
+            margin-left: 15px;
+        }
+
+        .ltr .sub-list li {
+            padding-right: 0;
+            padding-left: 15px;
+        }
+
+        .ltr .sub-list li::before {
+            right: auto;
+            left: 0;
+        }
+
+        .ltr .quote-box {
+            border-right: none;
+            border-left: 4px solid var(--text-light);
+            border-radius: 8px 0 0 8px;
+        }
+
+        .ltr .navbar {
+            flex-direction: row-reverse;
+        }
     </style>
 </head>
 <body class="rtl" id="bodyTag">
 
     <div class="container">
-        <!-- زر تبديل اللغة التفاعلي -->
-        <div class="lang-switch">
+        <!-- شريط التنقل العلوي -->
+        <nav class="navbar">
+            <div class="nav-brand" id="brandTitle">Nouf ALBdarni</div>
+            <ul class="nav-links" id="navLinksText">
+                <li><a href="#contact">التواصل</a></li>
+                <li><a href="#experience">الخبرات</a></li>
+                <li><a href="#about">نبذة عني</a></li>
+            </ul>
             <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">English</button>
-        </div>
+        </nav>
 
         <!-- ==================== المحتوى العربي ==================== -->
         <div id="arContent" class="lang-content active">
-            <header>
-                <h1>نوف البدراني / Nouf Albadrani</h1>
-                <p>أخصائية التزام / Compliance Specialist</p>
-            </header>
+            <section class="hero-section">
+                <h1>Nouf ALBdarni</h1>
+                <p>نوف فارس البدراني / أخصائية التزام / Compliance Specialist</p>
+            </section>
 
-            <section>
+            <section class="card" id="about">
                 <h2>1- نبذة</h2>
                 <p>خريجة تخصص الشريعة مع خبرة تزيد عن ثلاث سنوات في العمليات المالية. لقد عزز عملي الحالي في شركة صرافة فهمي للخدمات المالية، تعاملات العملاء، التنسيق الداخلي، إدارة سير العمل، معالجة المعاملات، والتوثيق التشغيلي ضمن بيئة منظمة.</p>
                 <p>خلال تدريبي في مجال الالتزام بالقطاع المالي، اكتسبت خبرة عملية في العمليات التنظيمية، متطلبات التراخيص، التواصل مع الجهات التنظيمية، وممارسات المراقبة وإعداد التقارير. ومع امتلاكي لمعارف في مجال مكافحة غسل الأموال وتمويل الإرهاب (AML/CFT)، الالتزام التنظيمي، واكتشاف الاحتيال، أواصل تطوير خبرتي في مجالات الالتزام وإدارة المخاطر ضمن بيئات الخدمات المالية.</p>
             </section>
 
-            <section>
+            <section class="card" id="experience">
                 <h2>2- الخبرات المهنية</h2>
-                <div class="card">
-                    <h3>شركة عملة للصرافة</h3>
-                    <ul>
-                        <li><strong>أخصائي عمليات | 2023 - الحاضر (3 سنوات)</strong>
-                            <ul class="sub-list">
-                                <li>إدارة استفسارات العملاء وتقديم الحلول الفعّالة لرفع نسبة الرضا.</li>
-                                <li>معالجة الحجوزات المالية والعمليات اليومية بدقة عالية.</li>
-                                <li>إعداد التقارير الدورية وتنسيق المتطلبات مع الأقسام الداخلية.</li>
-                            </ul>
-                        </li>
-                        <br>
-                        <li><strong>متدرب في قسم الالتزام | 2026</strong>
-                            <ul class="sub-list">
-                                <li>المشاركة في إجراءات الترخيص والتواصل مع البنك المركزي السعودي (SAMA).</li>
-                                <li>دراسة متطلبات افتتاح الفروع والتعيينات القيادية والرقابة الداخلية.</li>
-                            </ul>
-                        </li>
+                <h3>شركة عملة للصرافة</h3>
+                <div style="margin-top: 15px;">
+                    <div class="role-title">أخصائي عمليات | 2023 - الحاضر (3 سنوات)</div>
+                    <ul class="sub-list">
+                        <li>إدارة استفسارات العملاء وتقديم الحلول الفعّالة لرفع نسبة الرضا.</li>
+                        <li>معالجة الحجوزات المالية والعمليات اليومية بدقة عالية.</li>
+                        <li>إعداد التقارير الدورية وتنسيق المتطلبات مع الأقسام الداخلية.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div class="role-title">متدرب في قسم الالتزام | 2026</div>
+                    <ul class="sub-list">
+                        <li>المشاركة في إجراءات الترخيص والتواصل مع البنك المركزي السعودي (SAMA).</li>
+                        <li>دراسة متطلبات افتتاح الفروع والتعيينات القيادية والرقابة الداخلية.</li>
                     </ul>
                 </div>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>3- التعليم</h2>
-                <div class="card">
-                    <p><strong>بكالوريوس شريعة بتقدير ممتاز مع مرتبة الشرف الثانية بمعدل 4.66 من أصل 5</strong><br>جامعة الامام محمد بن سعود الإسلامية</p>
-                </div>
+                <p><strong>بكالوريوس شريعة بتقدير ممتاز مع مرتبة الشرف الثانية بمعدل 4.66 من أصل 5</strong><br>جامعة الامام محمد بن سعود الإسلامية</p>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>4- التطوع</h2>
                 <p style="margin-bottom: 15px;"><strong>المساهمة بأكثر من 270+ ساعة تطوعية في 8 جهات مختلفة</strong></p>
-                <div class="card">
-                    <h3>قائدة الموارد البشرية في نادي تكوين الفني التابع للعمادة في جامعة الإمام محمد بن سعود الإسلامية | 2024 – 2026</h3>
-                    <ul class="sub-list">
-                        <li>تنسيق وتنظيم المقابلات الشخصية للأعضاء الجدد.</li>
-                        <li>رصد الحضور والانصراف لأعضاء النادي بشكل دوري.</li>
-                        <li>رفع الساعات التطوعية لأعضاء النادي لعمادة الطلاب والمنصة التطوعية.</li>
-                        <li>صياغة وإرسال الإنذارات للأعضاء.</li>
-                        <li>تعزيز ثقافة العمل ضمن فريق من خلال التحفيز "عضو الأسبوع".</li>
-                        <li>التفاعل مع اللجان لضمان تحقيق أفضل النتائج في الفعاليات.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>أنشطة تطوعية عامة</h3>
-                    <ul class="sub-list">
-                        <li>أوبريت المتفوقات على مستوى منطقة الرياض | 2018</li>
-                        <li>متابعة ذوي الاحتياجات الخاصة | 2018 - 2019</li>
-                        <li>اليوم الوطني في مستشفى الملك خالد الجامعي | 2019</li>
-                        <li>مركز قدرة طفل | 2020</li>
-                        <li>تنظيم فعالية الاحتفال باليوم الوطني | 2024</li>
-                        <li>المساهمة في خطة إخلاء مبنى تعليمي | 2024</li>
-                        <li>تجهيز السلال الغذائية (2025) - تعبئة وتوزيع وجبات إفطار صائم 2025</li>
-                    </ul>
-                </div>
+                <div class="role-title">قائدة الموارد البشرية في نادي تكوين الفني التابع للعمادة في جامعة الإمام محمد بن سعود الإسلامية | 2024 – 2026</div>
+                <ul class="sub-list" style="margin-bottom: 20px;">
+                    <li>تنسيق وتنظيم المقابلات الشخصية للأعضاء الجدد.</li>
+                    <li>رصد الحضور والانصراف لأعضاء النادي بشكل دوري.</li>
+                    <li>رفع الساعات التطوعية لأعضاء النادي لعمادة الطلاب والمنصة التطوعية.</li>
+                    <li>صياغة وإرسال الإنذارات للأعضاء.</li>
+                    <li>تعزيز ثقافة العمل ضمن فريق من خلال التحفيز "عضو الأسبوع".</li>
+                    <li>التفاعل مع اللجان لضمان تحقيق أفضل النتائج في الفعاليات.</li>
+                </ul>
+                <div class="role-title">أنشطة تطوعية عامة</div>
+                <ul class="sub-list">
+                    <li>أوبريت المتفوقات على مستوى منطقة الرياض | 2018</li>
+                    <li>متابعة ذوي الاحتياجات الخاصة | 2018 - 2019</li>
+                    <li>اليوم الوطني في مستشفى الملك خالد الجامعي | 2019</li>
+                    <li>مركز قدرة طفل | 2020</li>
+                    <li>تنظيم فعالية الاحتفال باليوم الوطني | 2024</li>
+                    <li>المساهمة في خطة إخلاء مبنى تعليمي | 2024</li>
+                    <li>تجهيز السلال الغذائية (2025) - تعبئة وتوزيع وجبات إفطار صائم 2025</li>
+                </ul>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>5- الدورات</h2>
-                <div class="card">
-                    <ul class="sub-list">
-                        <li>الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)</li>
-                        <li>مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)</li>
-                        <li>مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)</li>
-                        <li>حماية البيانات الشخصية - أكاديمية الاستثمار (2025)</li>
-                    </ul>
-                </div>
+                <ul class="sub-list">
+                    <li>الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)</li>
+                    <li>مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)</li>
+                    <li>مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)</li>
+                    <li>حماية البيانات الشخصية - أكاديمية الاستثمار (2025)</li>
+                </ul>
             </section>
 
-            <section>
+            <section class="card" id="contact">
                 <h2>التواصل</h2>
                 <div class="quote-box">
                     "لتحقيق أعلى معايير الجودة والالتزام..أرحّب بكل فرصة مهنية وشراكة واعدة في مجالات الالتزام، وإدارة العمليات، لأضع خبرتي بين يديك لتحقيق التميز المؤسسي."
@@ -317,88 +343,77 @@
 
         <!-- ==================== المحتوى الإنجليزي ==================== -->
         <div id="enContent" class="lang-content">
-            <header>
-                <h1>Nouf Albadrani</h1>
-                <p>Compliance Specialist</p>
-            </header>
+            <section class="hero-section">
+                <h1>Nouf ALBdarni</h1>
+                <p>Compliance Specialist / Sharia Graduate</p>
+            </section>
 
-            <section>
+            <section class="card">
                 <h2>1- About</h2>
                 <p>Sharia graduate with over three years of experience in financial operations. My current work in an exchange company has strengthened my understanding of financial services, customer transactions, internal coordination, workflow management, transaction processing, and operational documentation within a regulated environment.</p>
                 <p>During my compliance training in the financial sector, I gained practical exposure to regulatory processes, licensing requirements, communication with regulatory authorities, and monitoring and reporting practices. With knowledge in AML/CFT, regulatory compliance, and fraud detection, I continue to develop my expertise in compliance and risk within financial services environments.</p>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>2- Professional Experience</h2>
-                <div class="card">
-                    <h3>Omlah Exchange</h3>
-                    <ul>
-                        <li><strong>Operations Associate | 2023 - Present (3 Years)</strong>
-                            <ul class="sub-list">
-                                <li>Managed client inquiries and delivered proactive solutions to maximize satisfaction.</li>
-                                <li>Processed financial reservations and daily operations with high accuracy.</li>
-                                <li>Prepared periodic reports and coordinated requirements across internal departments.</li>
-                            </ul>
-                        </li>
-                        <br>
-                        <li><strong>Compliance Trainee | 2026</strong>
-                            <ul class="sub-list">
-                                <li>Participated in licensing procedures and regulatory communication with SAMA.</li>
-                                <li>Reviewed branch opening requirements, leadership appointments, and internal monitoring frameworks.</li>
-                            </ul>
-                        </li>
+                <h3>Omlah Exchange</h3>
+                <div style="margin-top: 15px;">
+                    <div class="role-title">Operations Associate | 2023 - Present (3 Years)</div>
+                    <ul class="sub-list">
+                        <li>Managed client inquiries and delivered proactive solutions to maximize satisfaction.</li>
+                        <li>Processed financial reservations and daily operations with high accuracy.</li>
+                        <li>Prepared periodic reports and coordinated requirements across internal departments.</li>
+                    </ul>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div class="role-title">Compliance Trainee | 2026</div>
+                    <ul class="sub-list">
+                        <li>Participated in licensing procedures and regulatory communication with SAMA.</li>
+                        <li>Reviewed branch opening requirements, leadership appointments, and internal monitoring frameworks.</li>
                     </ul>
                 </div>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>3- Education</h2>
-                <div class="card">
-                    <p><strong>Bachelor of Sharia (Excellent with Second-Class Honors, GPA: 4.66 / 5)</strong><br>Imam Mohammad Ibn Saud Islamic University</p>
-                </div>
+                <p><strong>Bachelor of Sharia (Excellent with Second-Class Honors, GPA: 4.66 / 5)</strong><br>Imam Mohammad Ibn Saud Islamic University</p>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>4- Volunteering</h2>
                 <p style="margin-bottom: 15px;"><strong>Volunteering Overview: Contributed over 270+ volunteer hours across 8 different organizations.</strong></p>
-                <div class="card">
-                    <h3>HR Leader | Takween Art Club (Deanship of Student Affairs, Imam Mohammad Ibn Saud Islamic University) | 2024 – 2026</h3>
-                    <ul class="sub-list">
-                        <li>Coordinated and organized personal interviews for new members.</li>
-                        <li>Monitored regular attendance and punctuality for club members.</li>
-                        <li>Uploaded volunteer hours for club members to the Deanship of Student Affairs and the national volunteering platform.</li>
-                        <li>Drafted and issued official warnings to members when necessary.</li>
-                        <li>Fostered a collaborative team culture through the "Member of the Week" recognition initiative.</li>
-                        <li>Collaborated with various committees to ensure optimal execution and results during events.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>General Volunteer Activities</h3>
-                    <ul class="sub-list">
-                        <li>Top Students Operetta at the Riyadh Region Level | 2018</li>
-                        <li>Special Needs Support and Monitoring | 2018 - 2019</li>
-                        <li>National Day at King Khalid University Hospital | 2019</li>
-                        <li>Child Capacity Center (Qudrat Tifl Center) | 2020</li>
-                        <li>National Day Celebration Event Organization | 2024</li>
-                        <li>Educational Building Evacuation Plan Contribution | 2024</li>
-                        <li>Food Basket Preparation (2025) & Iftar Meals Packaging and Distribution (2025)</li>
-                    </ul>
-                </div>
+                <div class="role-title">HR Leader | Takween Art Club (Deanship of Student Affairs, Imam Mohammad Ibn Saud Islamic University) | 2024 – 2026</div>
+                <ul class="sub-list" style="margin-bottom: 20px;">
+                    <li>Coordinated and organized personal interviews for new members.</li>
+                    <li>Monitored regular attendance and punctuality for club members.</li>
+                    <li>Uploaded volunteer hours for club members to the Deanship of Student Affairs and the national volunteering platform.</li>
+                    <li>Drafted and issued official warnings to members when necessary.</li>
+                    <li>Fostered a collaborative team culture through the "Member of the Week" recognition initiative.</li>
+                    <li>Collaborated with various committees to ensure optimal execution and results during events.</li>
+                </ul>
+                <div class="role-title">General Volunteer Activities</div>
+                <ul class="sub-list">
+                    <li>Top Students Operetta at the Riyadh Region Level | 2018</li>
+                    <li>Special Needs Support and Monitoring | 2018 - 2019</li>
+                    <li>National Day at King Khalid University Hospital | 2019</li>
+                    <li>Child Capacity Center (Qudrat Tifl Center) | 2020</li>
+                    <li>National Day Celebration Event Organization | 2024</li>
+                    <li>Educational Building Evacuation Plan Contribution | 2024</li>
+                    <li>Food Basket Preparation (2025) & Iftar Meals Packaging and Distribution (2025)</li>
+                </ul>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>5- Courses & Certifications</h2>
-                <div class="card">
-                    <ul class="sub-list">
-                        <li>Professional Exam for Compliance Fundamentals | The Financial Academy | 2026</li>
-                        <li>Anti-Money Laundering (AML) & Financing of Terrorism | Investment Academy | 2025</li>
-                        <li>Anti-Fraud and Forgery Skills | Investment Academy | 2025</li>
-                        <li>Personal Data Protection | Investment Academy | 2025</li>
-                    </ul>
-                </div>
+                <ul class="sub-list">
+                    <li>Professional Exam for Compliance Fundamentals | The Financial Academy | 2026</li>
+                    <li>Anti-Money Laundering (AML) & Financing of Terrorism | Investment Academy | 2025</li>
+                    <li>Anti-Fraud and Forgery Skills | Investment Academy | 2025</li>
+                    <li>Personal Data Protection | Investment Academy | 2025</li>
+                </ul>
             </section>
 
-            <section>
+            <section class="card">
                 <h2>Contact</h2>
                 <div class="quote-box">
                     Let's Build Exceptional Results Together<br>Open to professional opportunities in Compliance & Operations
@@ -411,13 +426,14 @@
         </div>
     </div>
 
-    <!-- كود التفاعل لتبديل اللغات والاتجاهات -->
+    <!-- دالة التفاعل لتبديل اللغات -->
     <script>
         function toggleLanguage() {
             const body = document.getElementById('bodyTag');
             const arContent = document.getElementById('arContent');
             const enContent = document.getElementById('enContent');
             const langBtn = document.getElementById('langBtn');
+            const navLinks = document.getElementById('navLinksText');
 
             if (body.classList.contains('rtl')) {
                 body.classList.remove('rtl');
@@ -426,6 +442,7 @@
                 arContent.classList.remove('active');
                 enContent.classList.add('active');
                 langBtn.textContent = 'العربية';
+                navLinks.innerHTML = '<li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li>';
             } else {
                 body.classList.remove('ltr');
                 body.classList.add('rtl');
@@ -433,6 +450,7 @@
                 enContent.classList.remove('active');
                 arContent.classList.add('active');
                 langBtn.textContent = 'English';
+                navLinks.innerHTML = '<li><a href="#contact">التواصل</a></li><li><a href="#experience">الخبرات</a></li><li><a href="#about">نبذة عني</a></li>';
             }
         }
     </script>
