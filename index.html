@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouf ALBdarni</title>
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Dynamic Particles Background -->
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
+                Nouf ALBdarni
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">نبذة عني</a></li>
+                <li><a href="#experience">الخبرات</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <!-- Hero Header -->
+        <section class="hero">
+            <!-- Profile Image Placeholder -->
+            <div class="profile-upload-container" onclick="document.getElementById('imageUploadInput').click()">
+                <div class="profile-img-wrapper">
+                    <img id="profileImagePreview" src="" alt="Nouf ALBdarni" style="display: none;">
+                    <div class="profile-placeholder" id="profilePlaceholder">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>إضافة صورة شخصية</span>
+                    </div>
+                </div>
+            </div>
+            <input type="file" id="imageUploadInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
+
+            <h1 class="hero-title">Nouf ALBdarni</h1>
+            <div class="hero-subtitle-ar">نوف فارس البدراني</div>
+            
+            <div class="badge-text">
+                <i class="fa-solid fa-shield-halved"></i>
+                أخصائية امتثال مالي وحوكمة وعمليات
+            </div>
+
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-earth"><i class="fa-solid fa-paper-plane"></i> تواصل معي</a>
+                <a href="#about" class="btn btn-outline"><i class="fa-solid fa-user"></i> نبذة عني</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="content-card">
+                <h2 class="section-title">نبذة عني</h2>
+                <p>
+                    متخصصة حاصلة على بكالوريوس الشريعة وتأهيل مهني متقدم في <strong>الامتثال المالي والرقابة والحوكمة</strong>. أمتلك خبرة تطبيقية في تحسين جودة العمليات الماليّة وإدارة الموارد والالتزام بالأنظمة.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="content-card contact-card">
+                <h2>لنقم ببناء نتائج استثنائية معاً</h2>
+                <p>أرحب بالفرص المهنية والشراكات في مجالات الامتثال والحوكمة وإدارة العمليات</p>
+                <div class="cta-group">
+                    <a href="mailto:noufalbadrani3@gmail.com" class="btn btn-earth"><i class="fa-solid fa-envelope"></i> noufalbadrani3@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Nouf ALBdarni | جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 35, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#8F9779" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.25 },
+                "size": { "value": 3 },
+                "line_linked": { "enable": true, "distance": 150, "color": "#A3AB8D", "opacity": 0.15, "width": 1 },
+                "move": { "enable": true, "speed": 1.5 }
+            }
+        });
+
+        function previewImage(event) {
+            const input = event.target;
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.getElementById('profileImagePreview');
+                    const placeholder = document.getElementById('profilePlaceholder');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                    placeholder.style.display = 'none';
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
