@@ -3,233 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nouf ALBdarni</title>
-    <!-- Font Awesome & Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>نوف البدراني | Nouf Albadrani</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        header, section {
+            background: #fff;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3 {
+            color: #1a365d;
+        }
+        .english-section {
+            direction: ltr;
+            text-align: left;
+            margin-top: 40px;
+            border-top: 2px dashed #ccc;
+            padding-top: 20px;
+        }
+        ul {
+            padding-right: 20px;
+        }
+        .english-section ul {
+            padding-left: 20px;
+            padding-right: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .contact-box {
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Dynamic Particles Layer -->
-    <div id="particles-js"></div>
-
-    <!-- Floating Scales of Justice Background Animation -->
-    <div class="floating-scales-bg">
-        <i class="fa-solid fa-scale-balanced"></i>
-    </div>
-
-    <!-- Header Navigation -->
+    <!-- ==================== المحتوى العربي ==================== -->
     <header>
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
-                Nouf ALBdarni
-            </div>
-
-            <!-- Navigation Links strictly in requested order -->
-            <ul class="nav-links">
-                <li><a href="#about" data-ar="نبذة" data-en="About">نبذة</a></li>
-                <li><a href="#experience" data-ar="الخبرات" data-en="Experience">الخبرات</a></li>
-                <li><a href="#education" data-ar="التعليم" data-en="Education">التعليم</a></li>
-                <li><a href="#volunteer" data-ar="التطوع" data-en="Volunteering">التطوع</a></li>
-                <li><a href="#certifications" data-ar="الشهادات" data-en="Certifications">الشهادات</a></li>
-                <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
-            </ul>
-
-            <!-- Language Switcher Button -->
-            <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">
-                <i class="fa-solid fa-globe"></i>
-                <span id="langText">EN</span>
-            </button>
-        </div>
+        <h1>نوف البدراني / Nouf Albadrani</h1>
+        <p><strong>أخصائية التزام / Compliance Specialist</strong></p>
     </header>
 
-    <div class="content-wrapper">
-        <!-- Hero Header -->
-        <section class="hero">
-            <div class="profile-upload-container" onclick="document.getElementById('imageUploadInput').click()">
-                <div class="profile-img-wrapper">
-                    <img id="profileImagePreview" src="profile.jpg.jpeg" alt="Nouf ALBdarni" style="display: none;">
-                    <div class="profile-placeholder" id="profilePlaceholder">
-                        <i class="fa-solid fa-camera"></i>
-                        <span data-ar="إضافة صورة شخصية" data-en="Add Profile Picture">إضافة صورة شخصية</span>
-                    </div>
-                </div>
-            </div>
-            <input type="file" id="imageUploadInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
+    <section>
+        <h2>1- نبذة</h2>
+        <p>خريجة تخصص الشريعة مع خبرة تزيد عن ثلاث سنوات في العمليات المالية. لقد عزز عملي الحالي في شركة صرافة فهمي للخدمات المالية، تعاملات العملاء، التنسيق الداخلي، إدارة سير العمل، معالجة المعاملات، والتوثيق التشغيلي ضمن بيئة منظمة.</p>
+        <p>خلال تدريبي في مجال الالتزام بالقطاع المالي، اكتسبت خبرة عملية في العمليات التنظيمية، متطلبات التراخيص، التواصل مع الجهات التنظيمية، وممارسات المراقبة وإعداد التقارير. ومع امتلاكي لمعارف في مجال مكافحة غسل الأموال وتمويل الإرهاب (AML/CFT)، الالتزام التنظيمي، واكتشاف الاحتيال، أواصل تطوير خبرتي في مجالات الالتزام وإدارة المخاطر ضمن بيئات الخدمات المالية.</p>
+    </section>
 
-            <h1 class="hero-title">Nouf ALBdarni</h1>
-            <div class="hero-subtitle-ar" data-ar="نوف فارس البدراني" data-en="Nouf Faris Al-Badrani">نوف فارس البدراني</div>
-            
-            <div class="badge-text">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span data-ar="أخصائية امتثال مالي وحوكمة وعمليات" data-en="Financial Compliance, Governance & Operations Specialist">أخصائية امتثال مالي وحوكمة وعمليات</span>
-            </div>
-
-            <div class="cta-group">
-                <a href="#contact" class="btn btn-earth">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <span data-ar="تواصل معي" data-en="Contact Me">تواصل معي</span>
-                </a>
-                <a href="#about" class="btn btn-outline">
-                    <i class="fa-solid fa-user"></i>
-                    <span data-ar="نبذة عني" data-en="About Me">نبذة عني</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- 1. About Section -->
-        <section id="about">
-            <div class="content-card">
-                <h2 class="section-title" data-ar="نبذة عني" data-en="About Me">نبذة عني</h2>
-                <p data-ar="متخصصة خريجة شريعة وحاصلة على تدريب وتأهيل مهني في الامتثال المالي والرقابة. أمتلك سجلاً حافلاً في تحسين رضا العملاء، رفع كفاءة العمليات، وحل المشكلات المعقدة بأسلوب تحليلي. مهتمة بتطبيق معايير الحوكمة والالتزام بالأنظمة والمبادئ الأخلاقية المهنية لتحقيق أهداف المؤسسات." 
-                   data-en="Dedicated professional with a Bachelor of Sharia and specialized training in Financial Compliance[cite: 1]. Proven track record in enhancing client satisfaction and streamlining operational processes through proactive problem-solving[cite: 1]. Committed to leveraging strong analytical skills and professional ethics to contribute to high-impact organizational goals[cite: 1].">
-                   متخصصة خريجة شريعة وحاصلة على تدريب وتأهيل مهني في الامتثال المالي والرقابة[cite: 1]. أمتلك سجلاً حافلاً في تحسين رضا العملاء، رفع كفاءة العمليات، وحل المشكلات المعقدة بأسلوب تحليلي[cite: 1]. مهتمة بتطبيق معايير الحوكمة والالتزام بالأنظمة والمبادئ الأخلاقية المهنية لتحقيق أهداف المؤسسات[cite: 1].
-                </p>
-            </div>
-        </section>
-
-        <!-- 2. Experience Section -->
-        <section id="experience">
-            <div class="content-card">
-                <h2 class="section-title" data-ar="الخبرات المهنية" data-en="Professional Experience">الخبرات المهنية</h2>
-                <div class="item-block">
-                    <h3><span data-ar="أخصائي عمليات" data-en="Operations Associate">أخصائي عمليات</span> | Omlah Co.</h3>
-                    <span class="sub-date" data-ar="أغسطس 2023 - الحالي" data-en="Aug 2023 - Present">أغسطس 2023 - الحالي</span>[cite: 1]
-                    <ul>
-                        <li data-ar="تحسين زمن الاستجابة واستفسارات العملاء بنسبة 15%." data-en="Facilitated clear communication, resulting in a 15% improvement in client response time[cite: 1].">تحسين زمن الاستجابة واستفسارات العملاء بنسبة 15%[cite: 1].</li>
-                        <li data-ar="الحفاظ على نسبة رضا عملاء بلغت 95% من خلال حلول استباقية." data-en="Resolved complex issues, maintaining a 95% client satisfaction rate[cite: 1].">الحفاظ على نسبة رضا عملاء بلغت 95% من خلال حلول استباقية[cite: 1].</li>
-                        <li data-ar="تحليل استبيانات الجودة وتطبيق 3 تحسينات جوهرية في الخدمة." data-en="Implemented 3 key service improvements based on client feedback[cite: 1].">تحليل استبيانات الجودة وتطبيق 3 تحسينات جوهرية في الخدمة[cite: 1].</li>
-                    </ul>
-                </div>
-                <div class="item-block" style="margin-top: 1.5rem;">
-                    <h3><span data-ar="أخصائي امتثال - تدريب" data-en="Compliance Officer Intern">أخصائي امتثال - تدريب</span> | Omlah Co. Exchange</h3>
-                    <span class="sub-date" data-ar="يناير 2026 - يونيو 2026" data-en="Jan 2026 - June 2026">يناير 2026 - يونيو 2026</span>[cite: 1]
-                    <p data-ar="التطبيق العملي للأنظمة واللوائح الرقابية وفحص الهويات وتقييم المخاطر المالية والالتزام." 
-                       data-en="Practical application of regulatory frameworks, compliance monitoring, and financial risk management.">
-                       التطبيق العملي للأنظمة واللوائح الرقابية وفحص الهويات وتقييم المخاطر المالية والالتزام.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. Education Section -->
-        <section id="education">
-            <div class="content-card">
-                <h2 class="section-title" data-ar="التعليم" data-en="Education">التعليم</h2>
-                <div class="item-block">
-                    <h3><span data-ar="بكالوريوس شريعة" data-en="Bachelor of Sharia">بكالوريوس شريعة</span></h3>
-                    <span class="sub-date" data-ar="جامعة الإمام محمد بن سعود الإسلامية (2026)" data-en="Imam Mohammad Ibn Saud Islamic University (2026)">جامعة الإمام محمد بن سعود الإسلامية (2026)</span>[cite: 1]
-                    <p data-ar="تخصص شرعي وحوكمي ممتاز يركز على الأنظمة والمعاملات الفقهية والالتزام."
-                       data-en="Specialized education focusing on Islamic jurisprudence, regulatory frameworks, and governance.">
-                       تخصص شرعي وحوكمي ممتاز يركز على الأنظمة والمعاملات الفقهية والالتزام.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. Volunteer Section -->
-        <section id="volunteer">
-            <div class="content-card">
-                <h2 class="section-title" data-ar="العمل التطوعي" data-en="Volunteering">العمل التطوعي</h2>
-                <p style="margin-bottom: 1rem; font-weight: 600; color: var(--earth-accent);"
-                   data-ar="🎯 المساهمة بأكثر من 270+ ساعة تطوعية في 8 جهات مختلفة."
-                   data-en="🎯 Contributed over 270+ hours of volunteer service across 8 diverse organizations[cite: 1].">
-                   🎯 المساهمة بأكثر من 270+ ساعة تطوعية في 8 جهات مختلفة[cite: 1].
-                </p>
-                <div class="item-block">
-                    <h3><span data-ar="قائد الموارد البشرية (HR Leader)" data-en="HR Leader">قائد الموارد البشرية (HR Leader)</span> | Takween Art Club</h3>
-                    <span class="sub-date">2024 - 2026</span>[cite: 1]
-                    <ul>
-                        <li data-ar="إدارة عمليات الاستقطاب والمقابلات بنسبة 100% للأعضاء الجدد." data-en="Managed end-to-end recruitment process for new members[cite: 1].">إدارة عمليات الاستقطاب والمقابلات بنسبة 100% للأعضاء الجدد[cite: 1].</li>
-                        <li data-ar="القيادة والتنسيق مع 5 لجان مختلفة لتنفيذ البرامج في المواعيد المحددة." data-en="Partnered with 5 cross-functional committees to execute programs[cite: 1].">القيادة والتنسيق مع 5 لجان مختلفة لتنفيذ البرامج في المواعيد المحددة[cite: 1].</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. Certifications Section -->
-        <section id="certifications">
-            <div class="content-card">
-                <h2 class="section-title" data-ar="الشهادات المهنية" data-en="Certifications">الشهادات المهنية</h2>
-                <ul class="cert-list">
-                    <li><i class="fa-solid fa-award"></i> <span data-ar="الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)" data-en="Professional Exam for Compliance Fundamentals - Financial Academy (2026)">الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)</span>[cite: 1]</li>
-                    <li><i class="fa-solid fa-award"></i> <span data-ar="مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)" data-en="Anti-Money Laundering (AML) & Terrorism Financing - Investment Academy (2025)">مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)</span>[cite: 1]</li>
-                    <li><i class="fa-solid fa-award"></i> <span data-ar="مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)" data-en="Anti-Fraud and Forgery Skills - Investment Academy (2025)">مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)</span>[cite: 1]</li>
-                    <li><i class="fa-solid fa-award"></i> <span data-ar="حماية البيانات الشخصية - أكاديمية الاستثمار (2025)" data-en="Personal Data Protection - Investment Academy (2025)">حماية البيانات الشخصية - أكاديمية الاستثمار (2025)</span>[cite: 1]</li>
+    <section>
+        <h2>2- الخبرات المهنية</h2>
+        <h3>شركة عملة للصرافة</h3>
+        <ul>
+            <li><strong>أخصائي عمليات | 2023 - الحاضر (3 سنوات)</strong>
+                <ul>
+                    <li>إدارة استفسارات العملاء وتقديم الحلول الفعّالة لرفع نسبة الرضا.</li>
+                    <li>معالجة الحجوزات المالية والعمليات اليومية بدقة عالية.</li>
+                    <li>إعداد التقارير الدورية وتنسيق المتطلبات مع الأقسام الداخلية.</li>
                 </ul>
-            </div>
+            </li>
+            <li><strong>متدرب في قسم الالتزام | 2026</strong>
+                <ul>
+                    <li>المشاركة في إجراءات الترخيص والتواصل مع البنك المركزي السعودي (SAMA).</li>
+                    <li>دراسة متطلبات افتتاح الفروع والتعيينات القيادية والرقابة الداخلية.</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>3- التعليم</h2>
+        <p>بكالوريوس شريعة بتقدير ممتاز مع مرتبة الشرف الثانية بمعدل 4.66 من أصل 5<br>من جامعة الامام محمد بن سعود الإسلامية</p>
+    </section>
+
+    <section>
+        <h2>4- التطوع</h2>
+        <p><strong>المساهمة بأكثر من 270+ ساعة تطوعية في 8 جهات مختلفة</strong></p>
+        <ul>
+            <li><strong>قائدة الموارد البشرية في نادي تكوين الفني التابع للعمادة في جامعة الإمام محمد بن سعود الإسلامية | 2024 – 2026</strong>
+                <ul>
+                    <li>تنسيق وتنظيم المقابلات الشخصية للأعضاء الجدد.</li>
+                    <li>رصد الحضور والانصراف لأعضاء النادي بشكل دوري.</li>
+                    <li>رفع الساعات التطوعية لأعضاء النادي لعمادة الطلاب والمنصة التطوعية.</li>
+                    <li>صياغة وإرسال الإنذارات للأعضاء.</li>
+                    <li>تعزيز ثقافة العمل ضمن فريق من خلال التحفيز "عضو الأسبوع".</li>
+                    <li>التفاعل مع اللجان لضمان تحقيق أفضل النتائج في الفعاليات.</li>
+                </ul>
+            </li>
+            <li><strong>أنشطة تطوعية عامة</strong>
+                <ul>
+                    <li>أوبريت المتفوقات على مستوى منطقة الرياض | 2018</li>
+                    <li>متابعة ذوي الاحتياجات الخاصة | 2018 - 2019</li>
+                    <li>اليوم الوطني في مستشفى الملك خالد الجامعي | 2019</li>
+                    <li>مركز قدرة طفل | 2020</li>
+                    <li>تنظيم فعالية الاحتفال باليوم الوطني | 2024</li>
+                    <li>المساهمة في خطة إخلاء مبنى تعليمي | 2024</li>
+                    <li>تجهيز السلال الغذائية (2025) - تعبئة وتوزيع وجبات إفطار صائم 2025</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5- الدورات</h2>
+        <ul>
+            <li>الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)</li>
+            <li>مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)</li>
+            <li>مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)</li>
+            <li>حماية البيانات الشخصية - أكاديمية الاستثمار (2025)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>التواصل</h2>
+        <p class="contact-box">"لتحقيق أعلى معايير الجودة والالتزام..أرحّب بكل فرصة مهنية وشراكة واعدة في مجالات الالتزام، وإدارة العمليات، لأضع خبرتي بين يديك لتحقيق التميز المؤسسي."</p>
+        <p>البريد : Noufalbadrani3@gmail.com<br>هاتف : 0550022916</p>
+    </section>
+
+
+    <!-- ==================== المحتوى الإنجليزي ==================== -->
+    <div class="english-section">
+        <header>
+            <h1>Nouf Albadrani</h1>
+            <p><strong>Compliance Specialist</strong></p>
+        </header>
+
+        <section>
+            <h2>1- About</h2>
+            <p>Sharia graduate with over three years of experience in financial operations. My current work in an exchange company has strengthened my understanding of financial services, customer transactions, internal coordination, workflow management, transaction processing, and operational documentation within a regulated environment.</p>
+            <p>During my compliance training in the financial sector, I gained practical exposure to regulatory processes, licensing requirements, communication with regulatory authorities, and monitoring and reporting practices. With knowledge in AML/CFT, regulatory compliance, and fraud detection, I continue to develop my expertise in compliance and risk within financial services environments.</p>
         </section>
 
-        <!-- 6. Contact Section -->
-        <section id="contact">
-            <div class="content-card contact-card">
-                <h2 data-ar="لنقم ببناء نتائج استثنائية معاً" data-en="Let's Build Exceptional Results Together">لنقم ببناء نتائج استثنائية معاً</h2>
-                <p data-ar="أرحب بالفرص المهنية والشراكات في مجالات الامتثال والحوكمة وإدارة العمليات" data-en="Open to professional opportunities in Compliance, Governance & Operations">أرحب بالفرص المهنية والشراكات في مجالات الامتثال والحوكمة وإدارة العمليات</p>
-                <div class="cta-group">
-                    <a href="mailto:noufalbadrani3@gmail.com" class="btn btn-earth">
-                        <i class="fa-solid fa-envelope"></i> noufalbadrani3@gmail.com
-                    </a>
-                </div>
-            </div>
+        <section>
+            <h2>2- Professional Experience</h2>
+            <h3>Omlah Exchange</h3>
+            <ul>
+                <li><strong>Operations Associate | 2023 - Present (3 Years)</strong>
+                    <ul>
+                        <li>Managed client inquiries and delivered proactive solutions to maximize satisfaction.</li>
+                        <li>Processed financial reservations and daily operations with high accuracy.</li>
+                        <li>Prepared periodic reports and coordinated requirements across internal departments.</li>
+                    </ul>
+                </li>
+                <li><strong>Compliance Trainee | 2026</strong>
+                    <ul>
+                        <li>Participated in licensing procedures and regulatory communication with SAMA.</li>
+                        <li>Reviewed branch opening requirements, leadership appointments, and internal monitoring frameworks.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3- Education</h2>
+            <p>Bachelor of Sharia (Excellent with Second-Class Honors, GPA: 4.66 / 5)<br>Imam Mohammad Ibn Saud Islamic University</p>
+        </section>
+
+        <section>
+            <h2>4- Volunteering</h2>
+            <p><strong>Volunteering Overview: Contributed over 270+ volunteer hours across 8 different organizations.</strong></p>
+            <ul>
+                <li><strong>HR Leader | Takween Art Club (Deanship of Student Affairs, Imam Mohammad Ibn Saud Islamic University) | 2024 – 2026</strong>
+                    <ul>
+                        <li>Coordinated and organized personal interviews for new members.</li>
+                        <li>Monitored regular attendance and punctuality for club members.</li>
+                        <li>Uploaded volunteer hours for club members to the Deanship of Student Affairs and the national volunteering platform.</li>
+                        <li>Drafted and issued official warnings to members when necessary.</li>
+                        <li>Fostered a collaborative team culture through the "Member of the Week" recognition initiative.</li>
+                        <li>Collaborated with various committees to ensure optimal execution and results during events.</li>
+                    </ul>
+                </li>
+                <li><strong>General Volunteer Activities</strong>
+                    <ul>
+                        <li>Top Students Operetta at the Riyadh Region Level | 2018</li>
+                        <li>Special Needs Support and Monitoring | 2018 - 2019</li>
+                        <li>National Day at King Khalid University Hospital | 2019</li>
+                        <li>Child Capacity Center (Qudrat Tifl Center) | 2020</li>
+                        <li>National Day Celebration Event Organization | 2024</li>
+                        <li>Educational Building Evacuation Plan Contribution | 2024</li>
+                        <li>Food Basket Preparation (2025) & Iftar Meals Packaging and Distribution (2025)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5- Courses & Certifications</h2>
+            <ul>
+                <li>Professional Exam for Compliance Fundamentals | The Financial Academy | 2026</li>
+                <li>Anti-Money Laundering (AML) & Financing of Terrorism | Investment Academy | 2025</li>
+                <li>Anti-Fraud and Forgery Skills | Investment Academy | 2025</li>
+                <li>Personal Data Protection | Investment Academy | 2025</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p class="contact-box">Let's Build Exceptional Results Together<br>Open to professional opportunities in Compliance & Operations</p>
+            <p>Mail : Noufalbadrani3@gmail.com<br>Phone: 0550022916</p>
         </section>
     </div>
 
-    <footer>
-        <p>© 2026 Nouf ALBdarni | <span data-ar="جميع الحقوق محفوظة" data-en="All Rights Reserved">جميع الحقوق محفوظة</span></p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // Particles JS Config
-        particlesJS('particles-js', {
-            "particles": {
-                "number": { "value": 30, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#8F9779" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.2 },
-                "size": { "value": 3 },
-                "line_linked": { "enable": true, "distance": 150, "color": "#A3AB8D", "opacity": 0.12, "width": 1 },
-                "move": { "enable": true, "speed": 1.2 }
-            }
-        });
-
-        // Image Preview Handler
-        function previewImage(event) {
-            const input = event.target;
-            if (input.files && input.files[0]) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const img = document.getElementById('profileImagePreview');
-                    const placeholder = document.getElementById('profilePlaceholder');
-                    img.src = e.target.result;
-                    img.style.display = 'block';
-                    placeholder.style.display = 'none';
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-
-        // Language Switcher Toggle Functionality
-        let currentLang = 'ar';
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            document.documentElement.lang = currentLang;
-            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
-
-            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
-
-            const elements = document.querySelectorAll('[data-ar]');
-            elements.forEach(el => {
-                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                    el.placeholder = el.getAttribute(`data-${currentLang}`);
-                } else {
-                    el.textContent = el.getAttribute(`data-${currentLang}`);
-                }
-            });
-        }
-    </script>
 </body>
 </html>
