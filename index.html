@@ -1,489 +1,115 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="htmlRoot">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nouf ALBdarni | نوف البدراني</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Nouf ALBdarni</title>
+    <!-- Font Awesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg-color: #3b4238;
-            --card-bg: rgba(50, 56, 48, 0.95);
-            --text-main: #ffffff;
-            --text-muted: #d0d5ce;
-            --border-color: rgba(255, 255, 255, 0.15);
-            --accent-glow: rgba(96, 109, 92, 0.6);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Tajawal', sans-serif;
-            margin: 0;
-            padding: 20px;
-            direction: rtl;
-            text-align: right;
-            line-height: 1.8;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* خلفية تفاعلية بأسلوب الشبكة والأيقونات */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 40px;
-            backdrop-filter: blur(5px);
-        }
-
-        .nav-brand {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--text-main);
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-main);
-            text-shadow: 0 0 8px rgba(255,255,255,0.5);
-        }
-
-        .lang-btn {
-            background: var(--card-bg);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-family: 'Tajawal', sans-serif;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            background: #505c4b;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 40px 20px;
-            margin-bottom: 30px;
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-        }
-
-        /* Interactive Cards with Hover "Fly" Effect */
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-            backdrop-filter: blur(8px);
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
-            cursor: default;
-        }
-
-        /* تأثير التطاير عند اللمس أو تحريك الماوس */
-        .card:hover {
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px var(--accent-glow);
-            border-color: rgba(255, 255, 255, 0.35);
-        }
-
-        h2 {
-            font-size: 1.4rem;
-            color: var(--text-main);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        h3 {
-            font-size: 1.15rem;
-            color: var(--text-main);
-            margin-bottom: 15px;
-        }
-
-        p, li {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: disc;
-            margin-right: 20px;
-        }
-
-        .sub-item {
-            margin-bottom: 15px;
-        }
-
-        .role-title {
-            font-weight: bold;
-            color: var(--text-main);
-            margin-bottom: 5px;
-        }
-
-        /* Quote Box */
-        .quote {
-            background: rgba(0, 0, 0, 0.25);
-            border-right: 4px solid var(--text-main);
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
-            font-style: italic;
-            color: var(--text-main);
-            font-weight: 500;
-            transition: transform 0.3s ease;
-        }
-
-        .quote:hover {
-            transform: translateX(-5px);
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        .contact-item i {
-            color: var(--text-muted);
-        }
-
-        /* Language Switching Classes */
-        .lang-content {
-            display: none;
-            animation: fadeIn 0.5s ease forwards;
-        }
-
-        .lang-content.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* LTR Adjustments for English */
-        body.ltr {
-            direction: ltr;
-            text-align: left;
-        }
-
-        body.ltr .nav-links {
-            flex-direction: row;
-        }
-
-        body.ltr h2, body.ltr h3, body.ltr p, body.ltr li, body.ltr .quote {
-            text-align: left;
-        }
-
-        body.ltr ul {
-            margin-right: 0;
-            margin-left: 20px;
-        }
-
-        body.ltr .quote {
-            border-right: none;
-            border-left: 4px solid var(--text-main);
-            border-radius: 8px 0 0 8px;
-        }
-
-        body.ltr .quote:hover {
-            transform: translateX(5px);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="pageBody">
+<body>
 
-    <div class="container">
-        <!-- شريط التنقل العلوي -->
-        <nav class="navbar">
-            <div class="nav-brand">Nouf ALBdarni</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#contact">التواصل</a></li>
-                <li><a href="#experience">الخبرات</a></li>
+    <!-- Dynamic Particles Background -->
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
+                Nouf ALBdarni
+            </div>
+            <ul class="nav-links">
                 <li><a href="#about">نبذة عني</a></li>
+                <li><a href="#experience">الخبرات</a></li>
+                <li><a href="#contact">التواصل</a></li>
             </ul>
-            <button class="lang-btn" id="langToggleBtn" onclick="switchLanguage()">English</button>
-        </nav>
-
-        <!-- ==================== المحتوى العربي ==================== -->
-        <div id="arabicContent" class="lang-content active">
-            <div class="hero">
-                <h1>نوف البدراني</h1>
-                <p>Nouf Albadrani / أخصائية التزام / Compliance Specialist</p>
-            </div>
-
-            <div class="card" id="about">
-                <h2>1- نبذة</h2>
-                <p>خريجة تخصص الشريعة مع خبرة تزيد عن ثلاث سنوات في العمليات المالية. لقد عزز عملي الحالي في شركة صرافة فهمي للخدمات المالية، تعاملات العملاء، التنسيق الداخلي، إدارة سير العمل، معالجة المعاملات، والتوثيق التشغيلي ضمن بيئة منظمة.</p>
-                <p>خلال تدريبي في مجال الالتزام بالقطاع المالي، اكتسبت خبرة عملية في العمليات التنظيمية، متطلبات التراخيص، التواصل مع الجهات التنظيمية، وممارسات المراقبة وإعداد التقارير. ومع امتلاكي لمعارف في مجال مكافحة غسل الأموال وتمويل الإرهاب (AML/CFT)، الالتزام التنظيمي، واكتشاف الاحتيال، أواصل تطوير خبرتي في مجالات الالتزام وإدارة المخاطر ضمن بيئات الخدمات المالية.</p>
-            </div>
-
-            <div class="card" id="experience">
-                <h2>2- الخبرات المهنية</h2>
-                <h3>شركة عملة للصرافة</h3>
-                <div class="sub-item">
-                    <p class="role-title">أخصائي عمليات | 2023 - الحاضر (3 سنوات)</p>
-                    <ul>
-                        <li>إدارة استفسارات العملاء وتقديم الحلول الفعّالة لرفع نسبة الرضا.</li>
-                        <li>معالجة الحجوزات المالية والعمليات اليومية بدقة عالية.</li>
-                        <li>إعداد التقارير الدورية وتنسيق المتطلبات مع الأقسام الداخلية.</li>
-                    </ul>
-                </div>
-                <div class="sub-item" style="margin-top: 20px;">
-                    <p class="role-title">متدرب في قسم الالتزام | 2026</p>
-                    <ul>
-                        <li>المشاركة في إجراءات الترخيص والتواصل مع البنك المركزي السعودي (SAMA).</li>
-                        <li>دراسة متطلبات افتتاح الفروع والتعيينات القيادية والرقابة الداخلية.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>3- التعليم</h2>
-                <p><strong>بكالوريوس شريعة بتقدير ممتاز مع مرتبة الشرف الثانية بمعدل 4.66 من أصل 5</strong><br>من جامعة الامام محمد بن سعود الإسلامية</p>
-            </div>
-
-            <div class="card">
-                <h2>4- التطوع</h2>
-                <p><strong>المساهمة بأكثر من 270+ ساعة تطوعية في 8 جهات مختلفة</strong></p>
-                <div class="sub-item" style="margin-top: 15px;">
-                    <p class="role-title">قائدة الموارد البشرية في نادي تكوين الفني التابع للعمادة في جامعة الإمام محمد بن سعود الإسلامية | 2024 – 2026</p>
-                    <ul>
-                        <li>تنسيق وتنظيم المقابلات الشخصية للأعضاء الجدد.</li>
-                        <li>رصد الحضور والانصراف لأعضاء النادي بشكل دوري.</li>
-                        <li>رفع الساعات التطوعية لأعضاء النادي لعمادة الطلاب والمنصة التطوعية.</li>
-                        <li>صياغة وإرسال الإنذارات للأعضاء.</li>
-                        <li>تعزيز ثقافة العمل ضمن فريق من خلال التحفيز "عضو الأسبوع".</li>
-                        <li>التفاعل مع اللجان لضمان تحقيق أفضل النتائج في الفعاليات.</li>
-                    </ul>
-                </div>
-                <div class="sub-item" style="margin-top: 20px;">
-                    <p class="role-title">أنشطة تطوعية عامة</p>
-                    <ul>
-                        <li>أوبريت المتفوقات على مستوى منطقة الرياض | 2018</li>
-                        <li>متابعة ذوي الاحتياجات الخاصة | 2018 - 2019</li>
-                        <li>اليوم الوطني في مستشفى الملك خالد الجامعي | 2019</li>
-                        <li>مركز قدرة طفل | 2020</li>
-                        <li>تنظيم فعالية الاحتفال باليوم الوطني | 2024</li>
-                        <li>المساهمة في خطة إخلاء مبنى تعليمي | 2024</li>
-                        <li>تجهيز السلال الغذائية (2025) - تعبئة وتوزيع وجبات إفطار صائم 2025</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card">
-                <h2>5- الدورات</h2>
-                <ul>
-                    <li>الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)</li>
-                    <li>مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)</li>
-                    <li>مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)</li>
-                    <li>حماية البيانات الشخصية - أكاديمية الاستثمار (2025)</li>
-                </ul>
-            </div>
-
-            <div class="card" id="contact">
-                <h2>التواصل</h2>
-                <div class="quote">
-                    "لتحقيق أعلى معايير الجودة والالتزام..أرحّب بكل فرصة مهنية وشراكة واعدة في مجالات الالتزام، وإدارة العمليات، لأضع خبرتي بين يديك لتحقيق التميز المؤسسي."
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item"><i class="fa-solid fa-envelope"></i> البريد : Noufalbadrani3@gmail.com</div>
-                    <div class="contact-item"><i class="fa-solid fa-phone"></i> هاتف : 0550022916</div>
-                </div>
-            </div>
         </div>
+    </header>
 
-        <!-- ==================== المحتوى الإنجليزي ==================== -->
-        <div id="englishContent" class="lang-content">
-            <div class="hero">
-                <h1>Nouf Albadrani</h1>
-                <p>Nouf Albadrani / Compliance Specialist</p>
-            </div>
-
-            <div class="card">
-                <h2>1- About</h2>
-                <p>Sharia graduate with over three years of experience in financial operations. My current work in an exchange company has strengthened my understanding of financial services, customer transactions, internal coordination, workflow management, transaction processing, and operational documentation within a regulated environment.</p>
-                <p>During my compliance training in the financial sector, I gained practical exposure to regulatory processes, licensing requirements, communication with regulatory authorities, and monitoring and reporting practices. With knowledge in AML/CFT, regulatory compliance, and fraud detection, I continue to develop my expertise in compliance and risk within financial services environments.</p>
-            </div>
-
-            <div class="card">
-                <h2>2- Professional Experience</h2>
-                <h3>Omlah Exchange</h3>
-                <div class="sub-item">
-                    <p class="role-title">Operations Associate | 2023 - Present (3 Years)</p>
-                    <ul>
-                        <li>Managed client inquiries and delivered proactive solutions to maximize satisfaction.</li>
-                        <li>Processed financial reservations and daily operations with high accuracy.</li>
-                        <li>Prepared periodic reports and coordinated requirements across internal departments.</li>
-                    </ul>
-                </div>
-                <div class="sub-item" style="margin-top: 20px;">
-                    <p class="role-title">Compliance Trainee | 2026</p>
-                    <ul>
-                        <li>Participated in licensing procedures and regulatory communication with SAMA.</li>
-                        <li>Reviewed branch opening requirements, leadership appointments, and internal monitoring frameworks.</li>
-                    </ul>
+    <div class="content-wrapper">
+        <!-- Hero Header -->
+        <section class="hero">
+            <!-- Profile Image Placeholder -->
+            <div class="profile-upload-container" onclick="document.getElementById('imageUploadInput').click()">
+                <div class="profile-img-wrapper">
+                    <img id="profileImagePreview" src="" alt="Nouf ALBdarni" style="display: none;">
+                    <div class="profile-placeholder" id="profilePlaceholder">
+                        <i class="fa-solid fa-camera"></i>
+                        <span>إضافة صورة شخصية</span>
+                    </div>
                 </div>
             </div>
+            <input type="file" id="imageUploadInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
 
-            <div class="card">
-                <h2>3- Education</h2>
-                <p><strong>Bachelor of Sharia (Excellent with Second-Class Honors, GPA: 4.66 / 5)</strong><br>Imam Mohammad Ibn Saud Islamic University</p>
+            <h1 class="hero-title">Nouf ALBdarni</h1>
+            <div class="hero-subtitle-ar">نوف فارس البدراني</div>
+            
+            <div class="badge-text">
+                <i class="fa-solid fa-shield-halved"></i>
+                أخصائية امتثال مالي وحوكمة وعمليات
             </div>
 
-            <div class="card">
-                <h2>4- Volunteering</h2>
-                <p><strong>Volunteering Overview: Contributed over 270+ volunteer hours across 8 different organizations.</strong></p>
-                <div class="sub-item" style="margin-top: 15px;">
-                    <p class="role-title">HR Leader | Takween Art Club (Deanship of Student Affairs, Imam Mohammad Ibn Saud Islamic University) | 2024 – 2026</p>
-                    <ul>
-                        <li>Coordinated and organized personal interviews for new members.</li>
-                        <li>Monitored regular attendance and punctuality for club members.</li>
-                        <li>Uploaded volunteer hours for club members to the Deanship of Student Affairs and the national volunteering platform.</li>
-                        <li>Drafted and issued official warnings to members when necessary.</li>
-                        <li>Fostered a collaborative team culture through the "Member of the Week" recognition initiative.</li>
-                        <li>Collaborated with various committees to ensure optimal execution and results during events.</li>
-                    </ul>
-                </div>
-                <div class="sub-item" style="margin-top: 20px;">
-                    <p class="role-title">General Volunteer Activities</p>
-                    <ul>
-                        <li>Top Students Operetta at the Riyadh Region Level | 2018</li>
-                        <li>Special Needs Support and Monitoring | 2018 - 2019</li>
-                        <li>National Day at King Khalid University Hospital | 2019</li>
-                        <li>Child Capacity Center (Qudrat Tifl Center) | 2020</li>
-                        <li>National Day Celebration Event Organization | 2024</li>
-                        <li>Educational Building Evacuation Plan Contribution | 2024</li>
-                        <li>Food Basket Preparation (2025) & Iftar Meals Packaging and Distribution (2025)</li>
-                    </ul>
-                </div>
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-earth"><i class="fa-solid fa-paper-plane"></i> تواصل معي</a>
+                <a href="#about" class="btn btn-outline"><i class="fa-solid fa-user"></i> نبذة عني</a>
             </div>
+        </section>
 
-            <div class="card">
-                <h2>5- Courses & Certifications</h2>
-                <ul>
-                    <li>Professional Exam for Compliance Fundamentals | The Financial Academy | 2026</li>
-                    <li>Anti-Money Laundering (AML) & Financing of Terrorism | Investment Academy | 2025</li>
-                    <li>Anti-Fraud and Forgery Skills | Investment Academy | 2025</li>
-                    <li>Personal Data Protection | Investment Academy | 2025</li>
-                </ul>
+        <!-- About Section -->
+        <section id="about">
+            <div class="content-card">
+                <h2 class="section-title">نبذة عني</h2>
+                <p>
+                    متخصصة حاصلة على بكالوريوس الشريعة وتأهيل مهني متقدم في <strong>الامتثال المالي والرقابة والحوكمة</strong>. أمتلك خبرة تطبيقية في تحسين جودة العمليات الماليّة وإدارة الموارد والالتزام بالأنظمة.
+                </p>
             </div>
+        </section>
 
-            <div class="card">
-                <h2>Contact</h2>
-                <div class="quote">
-                    "Let's Build Exceptional Results Together. Open to professional opportunities in Compliance & Operations."
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item"><i class="fa-solid fa-envelope"></i> Mail : Noufalbadrani3@gmail.com</div>
-                    <div class="contact-item"><i class="fa-solid fa-phone"></i> Phone: 0550022916</div>
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="content-card contact-card">
+                <h2>لنقم ببناء نتائج استثنائية معاً</h2>
+                <p>أرحب بالفرص المهنية والشراكات في مجالات الامتثال والحوكمة وإدارة العمليات</p>
+                <div class="cta-group">
+                    <a href="mailto:noufalbadrani3@gmail.com" class="btn btn-earth"><i class="fa-solid fa-envelope"></i> noufalbadrani3@gmail.com</a>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
-    <!-- دالة جافاسكريبت لتبديل اللغات وتفاعل الأقسام -->
-    <script>
-        function switchLanguage() {
-            const body = document.getElementById('pageBody');
-            const htmlRoot = document.getElementById('htmlRoot');
-            const arabicContent = document.getElementById('arabicContent');
-            const englishContent = document.getElementById('englishContent');
-            const btn = document.getElementById('langToggleBtn');
-            const navLinks = document.getElementById('navLinks');
+    <footer>
+        <p>© 2026 Nouf ALBdarni | جميع الحقوق محفوظة</p>
+    </footer>
 
-            if (body.classList.contains('ltr')) {
-                // التحويل إلى العربية
-                body.classList.remove('ltr');
-                htmlRoot.setAttribute('dir', 'rtl');
-                htmlRoot.setAttribute('lang', 'ar');
-                arabicContent.classList.add('active');
-                englishContent.classList.remove('active');
-                btn.textContent = 'English';
-                navLinks.innerHTML = '<li><a href="#contact">التواصل</a></li><li><a href="#experience">الخبرات</a></li><li><a href="#about">نبذة عني</a></li>';
-            } else {
-                // التحويل إلى الإنجليزية
-                body.classList.add('ltr');
-                htmlRoot.setAttribute('dir', 'ltr');
-                htmlRoot.setAttribute('lang', 'en');
-                englishContent.classList.add('active');
-                arabicContent.classList.remove('active');
-                btn.textContent = 'العربية';
-                navLinks.innerHTML = '<li><a href="#about">About</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li>';
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 35, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#8F9779" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.25 },
+                "size": { "value": 3 },
+                "line_linked": { "enable": true, "distance": 150, "color": "#A3AB8D", "opacity": 0.15, "width": 1 },
+                "move": { "enable": true, "speed": 1.5 }
+            }
+        });
+
+        function previewImage(event) {
+            const input = event.target;
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.getElementById('profileImagePreview');
+                    const placeholder = document.getElementById('profilePlaceholder');
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                    placeholder.style.display = 'none';
+                }
+                reader.readAsDataURL(input.files[0]);
             }
         }
     </script>
