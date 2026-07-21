@@ -1,71 +1,340 @@
 # Nouf-AlBadrani
-# Hi there, I'm Nouf Al-Badrani 👋
+Act as a Senior GitHub Profile Designer, Personal Branding Expert, UI/UX Storyteller, and Senior Front-end Portfolio Designer.
 
-<p align="center">
-  <b>Operations & Financial Compliance Professional</b><br>
-  <i>Riyadh, Saudi Arabia</i>
-</p>
+Your mission is NOT to create a normal README.
 
----
+Your mission is to build a world-class GitHub Profile README that looks like a personal landing page.
 
-### 🎯 About Me
+The style should feel like Apple + Stripe + GitHub + Notion.
 
-Dedicated and results-oriented professional with a *Bachelor of Sharia* from Imam Mohammad Ibn Saud Islamic University and specialized training in *Financial Compliance*. 
+The design must be modern, premium, minimal, professional, creative and human-centered.
 
-Proven track record in optimizing operational processes, enhancing client satisfaction, and maintaining strict adherence to regulatory standards. Driven by strong analytical skills, professional ethics, and a passion for governance, risk management, and operational excellence.
+The README should not look like a resume.
 
----
+Instead it should tell my story.
 
-### 🛠️ Core Competencies & Skills
+━━━━━━━━━━━━━━━━━━━━━━
 
-- *Governance & Compliance:* Regulatory Compliance, Risk Management, Anti-Money Laundering (AML), Anti-Fraud & Forgery Skills, Personal Data Protection.
-- *Operations & Management:* Operational Excellence, Process Improvement, Client Relationship Management (CRM), Data-Driven Problem Solving.
-- *Leadership & HR:* Talent Acquisition, HR Coordination, Project Leadership & Cross-Functional Collaboration.
+## ABOUT ME
 
----
+Use my CV as the source of truth.
 
-### 💼 Professional Experience
+Extract my achievements instead of copying my CV.
 
-#### *Operations Associate* | Omlah Co. (Aug 2023 - Present)
-- Streamlined client communication workflows, achieving a *15% improvement* in response times and query resolution.
-- Maintained a *95% client satisfaction rate* by proactively resolving complex operational issues.
-- Analyzed client feedback surveys to drive *3 key service improvements*.
-- Managed high-precision booking coordination, ensuring *100% schedule accuracy*.
+Rewrite everything in a storytelling style.
 
-#### *Compliance Officer (Internship)* | Omlah Co. Exchange (Jan 2026 - Jun 2026)
-- Hands-on training and execution in financial regulatory compliance, AML, and identity verification processes.
+Never use resume language.
 
----
+Avoid large paragraphs.
 
-### 📜 Certifications & Licenses
+Everything should be visually broken into sections.
 
-- 🏅 *Professional Exam for Compliance Fundamentals* – The Financial Academy (2026)
-- 🛡️ *Anti-Money Laundering (AML) & Financing of Terrorism* – Investment Academy (2025)
-- 🔍 *Anti-Fraud and Forgery Skills* – Investment Academy (2025)
-- 🔒 *Personal Data Protection* – Investment Academy (2025)
+━━━━━━━━━━━━━━━━━━━━━━
 
----
+## DESIGN STYLE
 
-### 🤝 Leadership & Community Impact
+Use:
 
-> *270+ Volunteer Hours* across *8 Organizations*
+- HTML inside Markdown
+- Shields.io badges
+- SVG icons
+- GitHub Stats
+- GitHub Streak
+- Activity Graph
+- Visitor Counter
+- Typing SVG
+- Animated separators
+- Cards
+- Tables
+- Collapsible sections
+- Emoji only where elegant
+- Clean typography
+- Responsive layout
+- Centered sections
+- Premium spacing
 
-- *HR Leader* | Takween Art Club, Imam University (2024 - 2026)
-  - Led end-to-end talent acquisition and recruitment interviews.
-  - Partnered with 5 cross-functional committees to execute the Weekly Distinction Program.
-- *Safety Planner (2023):* Designed and implemented an emergency evacuation plan for 100+ individuals.
-- *Food Distribution Volunteer (2020, 2025):* Direct service to 100+ beneficiaries.
-- *Special Needs Support & Community Engagement:* Supervised inclusive learning environments and led patient-support initiatives at KKUH.
+The profile should look like a personal website.
 
----
+━━━━━━━━━━━━━━━━━━━━━━
 
-### 🎓 Education
+## HERO SECTION
 
-- *Bachelor of Sharia* | Imam Mohammad Ibn Saud Islamic University (2026)
+Create a stunning Hero section containing:
 
----
+Large welcome title
 
-### 📬 Connect with Me
+Animated typing effect
 
-- 📧 *Email:* [noufalbadrani3@gmail.com](mailto:noufalbadrani3@gmail.com)
-- 💼 *LinkedIn:* [Your LinkedIn Profile URL Here]
+Professional tagline
+
+Short personal introduction
+
+Professional profile image placeholder
+
+Background banner placeholder
+
+Social icons
+
+Email button
+
+LinkedIn button
+
+CV download button
+
+Portfolio button
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## ABOUT ME SECTION
+
+Instead of paragraphs,
+
+Create beautiful cards showing
+
+• Who I am
+
+• What I love
+
+• What I believe
+
+• My professional values
+
+• My mission
+
+• My mindset
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## IMPACT SECTION
+
+Transform every achievement from my CV into beautiful metrics.
+
+Example:
+
+🟢 270+ Volunteer Hours
+
+🟢 8 Organizations
+
+🟢 95% Client Satisfaction
+
+🟢 15% Faster Response Time
+
+🟢 100% Booking Accuracy
+
+Display them inside modern statistic cards.
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## EXPERIENCE
+
+Do NOT create a timeline.
+
+Instead create modern horizontal cards.
+
+Each card contains:
+
+Company
+
+Role
+
+Duration
+
+Biggest achievements
+
+Business impact
+
+Key skills used
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## VOLUNTEERING
+
+This should become one of the strongest sections.
+
+Create beautiful cards for each experience.
+
+Include:
+
+Organization
+
+Role
+
+Impact
+
+People served
+
+Leadership
+
+Community contribution
+
+Also create one summary card showing:
+
+270+ Hours
+
+8 Organizations
+
+Leadership Experience
+
+Social Impact
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## CERTIFICATIONS
+
+Display certificates as premium badges/cards.
+
+Financial Compliance
+
+AML
+
+Fraud Prevention
+
+Personal Data Protection
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## SKILLS
+
+Don't create bullets.
+
+Create categorized skill cards.
+
+Example:
+
+Compliance
+
+Risk Management
+
+HR
+
+Recruitment
+
+Project Management
+
+Leadership
+
+Operations
+
+Communication
+
+Critical Thinking
+
+CRM
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## GITHUB DASHBOARD
+
+Include
+
+GitHub Stats
+
+GitHub Streak
+
+Top Languages
+
+Contribution Graph
+
+Trophies
+
+Profile Views
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## FEATURED PROJECTS
+
+Generate beautiful placeholders for projects.
+
+Each project card should contain:
+
+Image placeholder
+
+Project title
+
+Description
+
+Tech stack
+
+Status
+
+Buttons
+
+Live Demo
+
+Repository
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## GALLERY
+
+Create an image gallery section using placeholders where I can later add:
+
+Volunteer photos
+
+Certificates
+
+Events
+
+Workshops
+
+Speaking engagements
+
+Community activities
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## LIFE PHILOSOPHY
+
+Create a premium quote section that reflects professionalism, ethics, leadership and continuous learning.
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## CONTACT
+
+Beautiful footer
+
+Social icons
+
+Email
+
+Location
+
+LinkedIn
+
+Portfolio
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+## IMPORTANT
+
+Never make it look like a resume.
+
+Instead make it feel like a premium personal website.
+
+Use advanced Markdown.
+
+Use HTML.
+
+Use SVG animations.
+
+Use shields.
+
+Use cards.
+
+Use tables only when beautiful.
+
+Keep everything elegant.
+
+Avoid walls of text.
+
+Everything should feel interactive.
+
+Use placeholders for all images so I can replace them later.
+
+Generate the final README.md only.
+
+No explanations.
+
+No comments.
+
+Only production-ready code.
