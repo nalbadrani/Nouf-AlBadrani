@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-color: #3b4238; /* الخلفية الزيتية المستوحاة من هويتك */
-            --card-bg: rgba(50, 56, 48, 0.9); /* لون البطاقات المتناسق */
-            --text-main: #ffffff; /* النصوص البيضاء البارزة */
-            --text-muted: #d0d5ce; /* النصوص الفرعية */
+            --bg-color: #3b4238;
+            --card-bg: rgba(50, 56, 48, 0.95);
+            --text-main: #ffffff;
+            --text-muted: #d0d5ce;
             --border-color: rgba(255, 255, 255, 0.15);
+            --accent-glow: rgba(96, 109, 92, 0.6);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            transition: all 0.3s ease;
         }
 
         body {
@@ -31,11 +31,29 @@
             direction: rtl;
             text-align: right;
             line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* خلفية تفاعلية بأسلوب الشبكة والأيقونات */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         /* Navbar */
@@ -46,6 +64,7 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--border-color);
             margin-bottom: 40px;
+            backdrop-filter: blur(5px);
         }
 
         .nav-brand {
@@ -65,10 +84,12 @@
             color: var(--text-muted);
             text-decoration: none;
             font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
             color: var(--text-main);
+            text-shadow: 0 0 8px rgba(255,255,255,0.5);
         }
 
         .lang-btn {
@@ -80,10 +101,13 @@
             cursor: pointer;
             font-family: 'Tajawal', sans-serif;
             font-size: 0.85rem;
+            transition: all 0.3s ease;
         }
 
         .lang-btn:hover {
             background: #505c4b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
         /* Hero Section */
@@ -104,15 +128,24 @@
             color: var(--text-muted);
         }
 
-        /* Cards */
+        /* Interactive Cards with Hover "Fly" Effect */
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 30px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            backdrop-filter: blur(5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            backdrop-filter: blur(8px);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+            cursor: default;
+        }
+
+        /* تأثير التطاير عند اللمس أو تحريك الماوس */
+        .card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 15px var(--accent-glow);
+            border-color: rgba(255, 255, 255, 0.35);
         }
 
         h2 {
@@ -153,7 +186,7 @@
 
         /* Quote Box */
         .quote {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.25);
             border-right: 4px solid var(--text-main);
             padding: 20px;
             border-radius: 0 8px 8px 0;
@@ -161,6 +194,11 @@
             font-style: italic;
             color: var(--text-main);
             font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .quote:hover {
+            transform: translateX(-5px);
         }
 
         .contact-info {
@@ -185,10 +223,16 @@
         /* Language Switching Classes */
         .lang-content {
             display: none;
+            animation: fadeIn 0.5s ease forwards;
         }
 
         .lang-content.active {
             display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* LTR Adjustments for English */
@@ -214,6 +258,10 @@
             border-right: none;
             border-left: 4px solid var(--text-main);
             border-radius: 8px 0 0 8px;
+        }
+
+        body.ltr .quote:hover {
+            transform: translateX(5px);
         }
     </style>
 </head>
@@ -408,7 +456,7 @@
         </div>
     </div>
 
-    <!-- دالة جافاسكريبت لتبديل اللغات بسلاسة -->
+    <!-- دالة جافاسكريبت لتبديل اللغات وتفاعل الأقسام -->
     <script>
         function switchLanguage() {
             const body = document.getElementById('pageBody');
