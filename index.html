@@ -11,93 +11,192 @@
 </head>
 <body>
 
-    <!-- Dynamic Particles Background -->
+    <!-- Dynamic Particles Layer -->
     <div id="particles-js"></div>
 
+    <!-- Floating Scales of Justice Background Animation -->
+    <div class="floating-scales-bg">
+        <i class="fa-solid fa-scale-balanced"></i>
+    </div>
+
+    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
             <div class="logo">
                 <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
                 Nouf ALBdarni
             </div>
+
+            <!-- Navigation Links strictly in requested order -->
             <ul class="nav-links">
-                <li><a href="#about">نبذة عني</a></li>
-                <li><a href="#experience">الخبرات</a></li>
-                <li><a href="#contact">التواصل</a></li>
+                <li><a href="#about" data-ar="نبذة" data-en="About">نبذة</a></li>
+                <li><a href="#experience" data-ar="الخبرات" data-en="Experience">الخبرات</a></li>
+                <li><a href="#education" data-ar="التعليم" data-en="Education">التعليم</a></li>
+                <li><a href="#volunteer" data-ar="التطوع" data-en="Volunteering">التطوع</a></li>
+                <li><a href="#certifications" data-ar="الشهادات" data-en="Certifications">الشهادات</a></li>
+                <li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
             </ul>
+
+            <!-- Language Switcher Button -->
+            <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">
+                <i class="fa-solid fa-globe"></i>
+                <span id="langText">EN</span>
+            </button>
         </div>
     </header>
 
     <div class="content-wrapper">
         <!-- Hero Header -->
         <section class="hero">
-            <!-- Profile Image Placeholder -->
             <div class="profile-upload-container" onclick="document.getElementById('imageUploadInput').click()">
                 <div class="profile-img-wrapper">
                     <img id="profileImagePreview" src="" alt="Nouf ALBdarni" style="display: none;">
                     <div class="profile-placeholder" id="profilePlaceholder">
                         <i class="fa-solid fa-camera"></i>
-                        <span>إضافة صورة شخصية</span>
+                        <span data-ar="إضافة صورة شخصية" data-en="Add Profile Picture">إضافة صورة شخصية</span>
                     </div>
                 </div>
             </div>
             <input type="file" id="imageUploadInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
 
             <h1 class="hero-title">Nouf ALBdarni</h1>
-            <div class="hero-subtitle-ar">نوف فارس البدراني</div>
+            <div class="hero-subtitle-ar" data-ar="نوف فارس البدراني" data-en="Nouf Faris Al-Badrani">نوف فارس البدراني</div>
             
             <div class="badge-text">
                 <i class="fa-solid fa-shield-halved"></i>
-                أخصائية امتثال مالي وحوكمة وعمليات
+                <span data-ar="أخصائية امتثال مالي وحوكمة وعمليات" data-en="Financial Compliance, Governance & Operations Specialist">أخصائية امتثال مالي وحوكمة وعمليات</span>
             </div>
 
             <div class="cta-group">
-                <a href="#contact" class="btn btn-earth"><i class="fa-solid fa-paper-plane"></i> تواصل معي</a>
-                <a href="#about" class="btn btn-outline"><i class="fa-solid fa-user"></i> نبذة عني</a>
+                <a href="#contact" class="btn btn-earth">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span data-ar="تواصل معي" data-en="Contact Me">تواصل معي</span>
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <i class="fa-solid fa-user"></i>
+                    <span data-ar="نبذة عني" data-en="About Me">نبذة عني</span>
+                </a>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- 1. About Section -->
         <section id="about">
             <div class="content-card">
-                <h2 class="section-title">نبذة عني</h2>
-                <p>
-                    متخصصة حاصلة على بكالوريوس الشريعة وتأهيل مهني متقدم في <strong>الامتثال المالي والرقابة والحوكمة</strong>. أمتلك خبرة تطبيقية في تحسين جودة العمليات الماليّة وإدارة الموارد والالتزام بالأنظمة.
+                <h2 class="section-title" data-ar="نبذة عني" data-en="About Me">نبذة عني</h2>
+                <p data-ar="متخصصة خريجة شريعة وحاصلة على تدريب وتأهيل مهني في الامتثال المالي والرقابة. أمتلك سجلاً حافلاً في تحسين رضا العملاء، رفع كفاءة العمليات، وحل المشكلات المعقدة بأسلوب تحليلي. مهتمة بتطبيق معايير الحوكمة والالتزام بالأنظمة والمبادئ الأخلاقية المهنية لتحقيق أهداف المؤسسات." 
+                   data-en="Dedicated professional with a Bachelor of Sharia and specialized training in Financial Compliance[cite: 1]. Proven track record in enhancing client satisfaction and streamlining operational processes through proactive problem-solving[cite: 1]. Committed to leveraging strong analytical skills and professional ethics to contribute to high-impact organizational goals[cite: 1].">
+                   متخصصة خريجة شريعة وحاصلة على تدريب وتأهيل مهني في الامتثال المالي والرقابة[cite: 1]. أمتلك سجلاً حافلاً في تحسين رضا العملاء، رفع كفاءة العمليات، وحل المشكلات المعقدة بأسلوب تحليلي[cite: 1]. مهتمة بتطبيق معايير الحوكمة والالتزام بالأنظمة والمبادئ الأخلاقية المهنية لتحقيق أهداف المؤسسات[cite: 1].
                 </p>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- 2. Experience Section -->
+        <section id="experience">
+            <div class="content-card">
+                <h2 class="section-title" data-ar="الخبرات المهنية" data-en="Professional Experience">الخبرات المهنية</h2>
+                <div class="item-block">
+                    <h3><span data-ar="أخصائي عمليات" data-en="Operations Associate">أخصائي عمليات</span> | Omlah Co.</h3>
+                    <span class="sub-date" data-ar="أغسطس 2023 - الحالي" data-en="Aug 2023 - Present">أغسطس 2023 - الحالي</span>[cite: 1]
+                    <ul>
+                        <li data-ar="تحسين زمن الاستجابة واستفسارات العملاء بنسبة 15%." data-en="Facilitated clear communication, resulting in a 15% improvement in client response time[cite: 1].">تحسين زمن الاستجابة واستفسارات العملاء بنسبة 15%[cite: 1].</li>
+                        <li data-ar="الحفاظ على نسبة رضا عملاء بلغت 95% من خلال حلول استباقية." data-en="Resolved complex issues, maintaining a 95% client satisfaction rate[cite: 1].">الحفاظ على نسبة رضا عملاء بلغت 95% من خلال حلول استباقية[cite: 1].</li>
+                        <li data-ar="تحليل استبيانات الجودة وتطبيق 3 تحسينات جوهرية في الخدمة." data-en="Implemented 3 key service improvements based on client feedback[cite: 1].">تحليل استبيانات الجودة وتطبيق 3 تحسينات جوهرية في الخدمة[cite: 1].</li>
+                    </ul>
+                </div>
+                <div class="item-block" style="margin-top: 1.5rem;">
+                    <h3><span data-ar="أخصائي امتثال - تدريب" data-en="Compliance Officer Intern">أخصائي امتثال - تدريب</span> | Omlah Co. Exchange</h3>
+                    <span class="sub-date" data-ar="يناير 2026 - يونيو 2026" data-en="Jan 2026 - June 2026">يناير 2026 - يونيو 2026</span>[cite: 1]
+                    <p data-ar="التطبيق العملي للأنظمة واللوائح الرقابية وفحص الهويات وتقييم المخاطر المالية والالتزام." 
+                       data-en="Practical application of regulatory frameworks, compliance monitoring, and financial risk management.">
+                       التطبيق العملي للأنظمة واللوائح الرقابية وفحص الهويات وتقييم المخاطر المالية والالتزام.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Education Section -->
+        <section id="education">
+            <div class="content-card">
+                <h2 class="section-title" data-ar="التعليم" data-en="Education">التعليم</h2>
+                <div class="item-block">
+                    <h3><span data-ar="بكالوريوس شريعة" data-en="Bachelor of Sharia">بكالوريوس شريعة</span></h3>
+                    <span class="sub-date" data-ar="جامعة الإمام محمد بن سعود الإسلامية (2026)" data-en="Imam Mohammad Ibn Saud Islamic University (2026)">جامعة الإمام محمد بن سعود الإسلامية (2026)</span>[cite: 1]
+                    <p data-ar="تخصص شرعي وحوكمي ممتاز يركز على الأنظمة والمعاملات الفقهية والالتزام."
+                       data-en="Specialized education focusing on Islamic jurisprudence, regulatory frameworks, and governance.">
+                       تخصص شرعي وحوكمي ممتاز يركز على الأنظمة والمعاملات الفقهية والالتزام.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Volunteer Section -->
+        <section id="volunteer">
+            <div class="content-card">
+                <h2 class="section-title" data-ar="العمل التطوعي" data-en="Volunteering">العمل التطوعي</h2>
+                <p style="margin-bottom: 1rem; font-weight: 600; color: var(--earth-accent);"
+                   data-ar="🎯 المساهمة بأكثر من 270+ ساعة تطوعية في 8 جهات مختلفة."
+                   data-en="🎯 Contributed over 270+ hours of volunteer service across 8 diverse organizations[cite: 1].">
+                   🎯 المساهمة بأكثر من 270+ ساعة تطوعية في 8 جهات مختلفة[cite: 1].
+                </p>
+                <div class="item-block">
+                    <h3><span data-ar="قائد الموارد البشرية (HR Leader)" data-en="HR Leader">قائد الموارد البشرية (HR Leader)</span> | Takween Art Club</h3>
+                    <span class="sub-date">2024 - 2026</span>[cite: 1]
+                    <ul>
+                        <li data-ar="إدارة عمليات الاستقطاب والمقابلات بنسبة 100% للأعضاء الجدد." data-en="Managed end-to-end recruitment process for new members[cite: 1].">إدارة عمليات الاستقطاب والمقابلات بنسبة 100% للأعضاء الجدد[cite: 1].</li>
+                        <li data-ar="القيادة والتنسيق مع 5 لجان مختلفة لتنفيذ البرامج في المواعيد المحددة." data-en="Partnered with 5 cross-functional committees to execute programs[cite: 1].">القيادة والتنسيق مع 5 لجان مختلفة لتنفيذ البرامج في المواعيد المحددة[cite: 1].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Certifications Section -->
+        <section id="certifications">
+            <div class="content-card">
+                <h2 class="section-title" data-ar="الشهادات المهنية" data-en="Certifications">الشهادات المهنية</h2>
+                <ul class="cert-list">
+                    <li><i class="fa-solid fa-award"></i> <span data-ar="الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)" data-en="Professional Exam for Compliance Fundamentals - Financial Academy (2026)">الاختبار المهني لأساسيات الامتثال - الأكاديمية المالية (2026)</span>[cite: 1]</li>
+                    <li><i class="fa-solid fa-award"></i> <span data-ar="مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)" data-en="Anti-Money Laundering (AML) & Terrorism Financing - Investment Academy (2025)">مكافحة غسل الأموال وتمويل الإرهاب (AML) - أكاديمية الاستثمار (2025)</span>[cite: 1]</li>
+                    <li><i class="fa-solid fa-award"></i> <span data-ar="مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)" data-en="Anti-Fraud and Forgery Skills - Investment Academy (2025)">مهارات مكافحة الاحتيال والتزوير - أكاديمية الاستثمار (2025)</span>[cite: 1]</li>
+                    <li><i class="fa-solid fa-award"></i> <span data-ar="حماية البيانات الشخصية - أكاديمية الاستثمار (2025)" data-en="Personal Data Protection - Investment Academy (2025)">حماية البيانات الشخصية - أكاديمية الاستثمار (2025)</span>[cite: 1]</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
         <section id="contact">
             <div class="content-card contact-card">
-                <h2>لنقم ببناء نتائج استثنائية معاً</h2>
-                <p>أرحب بالفرص المهنية والشراكات في مجالات الامتثال والحوكمة وإدارة العمليات</p>
+                <h2 data-ar="لنقم ببناء نتائج استثنائية معاً" data-en="Let's Build Exceptional Results Together">لنقم ببناء نتائج استثنائية معاً</h2>
+                <p data-ar="أرحب بالفرص المهنية والشراكات في مجالات الامتثال والحوكمة وإدارة العمليات" data-en="Open to professional opportunities in Compliance, Governance & Operations">أرحب بالفرص المهنية والشراكات في مجالات الامتثال والحوكمة وإدارة العمليات</p>
                 <div class="cta-group">
-                    <a href="mailto:noufalbadrani3@gmail.com" class="btn btn-earth"><i class="fa-solid fa-envelope"></i> noufalbadrani3@gmail.com</a>
+                    <a href="mailto:noufalbadrani3@gmail.com" class="btn btn-earth">
+                        <i class="fa-solid fa-envelope"></i> noufalbadrani3@gmail.com
+                    </a>
                 </div>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>© 2026 Nouf ALBdarni | جميع الحقوق محفوظة</p>
+        <p>© 2026 Nouf ALBdarni | <span data-ar="جميع الحقوق محفوظة" data-en="All Rights Reserved">جميع الحقوق محفوظة</span></p>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // Particles JS Config
         particlesJS('particles-js', {
             "particles": {
-                "number": { "value": 35, "density": { "enable": true, "value_area": 800 } },
+                "number": { "value": 30, "density": { "enable": true, "value_area": 800 } },
                 "color": { "value": "#8F9779" },
                 "shape": { "type": "circle" },
-                "opacity": { "value": 0.25 },
+                "opacity": { "value": 0.2 },
                 "size": { "value": 3 },
-                "line_linked": { "enable": true, "distance": 150, "color": "#A3AB8D", "opacity": 0.15, "width": 1 },
-                "move": { "enable": true, "speed": 1.5 }
+                "line_linked": { "enable": true, "distance": 150, "color": "#A3AB8D", "opacity": 0.12, "width": 1 },
+                "move": { "enable": true, "speed": 1.2 }
             }
         });
 
+        // Image Preview Handler
         function previewImage(event) {
             const input = event.target;
             if (input.files && input.files[0]) {
@@ -111,6 +210,25 @@
                 }
                 reader.readAsDataURL(input.files[0]);
             }
+        }
+
+        // Language Switcher Toggle Functionality
+        let currentLang = 'ar';
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+            document.getElementById('langText').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+
+            const elements = document.querySelectorAll('[data-ar]');
+            elements.forEach(el => {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = el.getAttribute(`data-${currentLang}`);
+                } else {
+                    el.textContent = el.getAttribute(`data-${currentLang}`);
+                }
+            });
         }
     </script>
 </body>
