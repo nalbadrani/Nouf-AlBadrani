@@ -10,11 +10,11 @@
     <style>
         :root {
             --bg-color: #2c322b;
-            --card-bg: rgba(44, 50, 43, 0.85);
-            --card-border: rgba(143, 151, 121, 0.25);
+            --card-bg: rgba(58, 65, 57, 0.9);
+            --card-border: rgba(163, 172, 141, 0.35);
             --text-main: #ffffff;
-            --text-muted: #d0d5ce;
-            --accent-color: #8F9779;
+            --text-muted: #dcdfd8;
+            --accent-color: #9fa888;
         }
 
         * {
@@ -67,7 +67,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(44, 50, 43, 0.9);
+            background: rgba(44, 50, 43, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--card-border);
             z-index: 1000;
@@ -109,7 +109,7 @@
         }
 
         .lang-btn {
-            background: rgba(143, 151, 121, 0.2);
+            background: rgba(163, 172, 141, 0.25);
             color: var(--text-main);
             border: 1px solid var(--accent-color);
             padding: 5px 15px;
@@ -155,7 +155,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(143, 151, 121, 0.15);
+            background: rgba(163, 172, 141, 0.2);
             border: 1px solid var(--card-border);
             padding: 8px 20px;
             border-radius: 30px;
@@ -168,7 +168,6 @@
             color: var(--accent-color);
         }
 
-        /* Hero Quick Contact Bar */
         .hero-contact-bar {
             display: flex;
             justify-content: center;
@@ -180,21 +179,21 @@
 
         .hero-contact-btn {
             background: var(--accent-color);
-            color: #fff;
+            color: #2c322b;
             padding: 10px 20px;
             border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.95rem;
             display: inline-flex;
             align-items: center;
             gap: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
         }
 
         .hero-contact-btn:hover {
-            background-color: #7b8366;
+            background-color: #b0b99a;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
@@ -205,15 +204,15 @@
             border-radius: 14px;
             padding: 30px;
             margin-bottom: 25px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 35px rgba(0,0,0,0.25);
             backdrop-filter: blur(10px);
             transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
         }
 
         .content-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
-            border-color: var(--accent-color);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+            border-color: #b0b99a;
         }
 
         .section-title {
@@ -268,13 +267,67 @@
         }
 
         .quote-box {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(44, 50, 43, 0.4);
             border-right: 4px solid var(--accent-color);
             padding: 20px;
             border-radius: 0 8px 8px 0;
             margin-bottom: 20px;
             font-style: italic;
             color: var(--text-main);
+        }
+
+        /* Education Card Layout matching user reference */
+        .edu-flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .edu-info {
+            flex: 1;
+        }
+
+        .edu-degree {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .edu-university {
+            font-size: 1.05rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .edu-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(159, 168, 136, 0.2);
+            border: 1px solid var(--card-border);
+            padding: 6px 16px;
+            border-radius: 20px;
+            color: #d4dbc9;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .edu-icon-box {
+            width: 70px;
+            height: 70px;
+            background: #2c322b;
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         footer {
@@ -294,7 +347,8 @@
         body.ltr .section-title, 
         body.ltr p, 
         body.ltr li, 
-        body.ltr .item-block h3 {
+        body.ltr .item-block h3,
+        body.ltr .edu-degree {
             text-align: left;
         }
 
@@ -307,6 +361,16 @@
             border-right: none;
             border-left: 4px solid var(--accent-color);
             border-radius: 8px 0 0 8px;
+        }
+
+        @media (max-width: 768px) {
+            .edu-flex-container {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -347,7 +411,6 @@
                 <span data-ar="أخصائية التزام" data-en="Compliance Specialist">أخصائية التزام</span>
             </div>
 
-            <!-- أزرار التواصل السريع البارزة تحت الاسم -->
             <div class="hero-contact-bar">
                 <a href="mailto:Noufalbadrani3@gmail.com" class="hero-contact-btn">
                     <i class="fa-solid fa-envelope"></i> Noufalbadrani3@gmail.com
@@ -401,15 +464,22 @@ During my compliance training in the financial sector, I gained practical exposu
             </div>
         </section>
 
-        <!-- 3. Education Section -->
+        <!-- 3. Education Section (Redesigned matching user image reference) -->
         <section id="education">
             <div class="content-card">
                 <h2 class="section-title" data-ar="التعليم" data-en="Education">التعليم</h2>
-                <div class="item-block">
-                    <p data-ar="بكالوريوس شريعة بتقدير ممتاز مع مرتبة الشرف الثانية بمعدل 4.66 من أصل 5 من جامعة الامام محمد بن سعود الإسلامية"
-                       data-en="Bachelor of Sharia (Excellent with Second-Class Honors, GPA: 4.66 / 5) Imam Mohammad Ibn Saud Islamic University">
-                       بكالوريوس شريعة بتقدير ممتاز مع مرتبة الشرف الثانية بمعدل 4.66 من أصل 5 من جامعة الامام محمد بن سعود الإسلامية
-                    </p>
+                <div class="edu-flex-container">
+                    <div class="edu-info">
+                        <div class="edu-degree" data-ar="بكالوريوس، الشريعة" data-en="Bachelor of Sharia">بكالوريوس، الشريعة</div>
+                        <div class="edu-university" data-ar="جامعة الإمام محمد بن سعود الإسلامية" data-en="Imam Mohammad Ibn Saud Islamic University">جامعة الإمام محمد بن سعود الإسلامية</div>
+                        <div class="edu-badge">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span data-ar="المعدل التراكمي: 4.66 / 5.00 (ممتاز مع مرتبة الشرف الثانية)" data-en="GPA: 4.66 / 5.00 (Excellent with Second-Class Honors)">المعدل التراكمي: 4.66 / 5.00 (ممتاز مع مرتبة الشرف الثانية)</span>
+                        </div>
+                    </div>
+                    <div class="edu-icon-box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
                 </div>
             </div>
         </section>
